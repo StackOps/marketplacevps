@@ -3,10 +3,10 @@
         {
             "id": "1",
             "name": "bugzilla",
-            "image-name": "turnkey-bugzilla-13.0-wheezy-amd64.img",
             "image-id": "498f8b84-69a8-4f5d-9758-d259d7013e34",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/bugzilla.jpg",
+            "cloudinit": false,
             "code": {
                 "variables": {
                     "ROOT_PASS": {
@@ -81,10 +81,10 @@
         {
             "id": "2",
             "name": "django",
-            "image-name": "turnkey-django-13.0-wheezy-amd64.img",
             "image-id": "4c59c935-acb4-4256-a605-9d34f888b6dd",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/django.jpg",
+            "cloudinit": false,
             "code": {
                 "variables": {
                     "ROOT_PASS": {
@@ -156,10 +156,10 @@
         {
             "id": "3",
             "name": "dokuwiki",
-            "image-name": "turnkey-dokuwiki-13.0-wheezy-amd64.img",
             "image-id": "0a3cc9da-afcf-4b07-bdf6-04c70a989abd",
             "organization": "StackOpsTechnologiesS.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/dokuwiki.jpg",
+            "cloudinit": false,
             "code": {
                 "variables": {
                     "ROOT_PASS": {
@@ -232,10 +232,10 @@
         {
             "id": "4",
             "name": "drupal7",
-            "image-name": "turnkey-drupal7-13.0-wheezy-amd64.img",
             "image-id": "8fb9d6c3-6393-426a-b8cf-9e456f1d3b1c",
             "organization": "StackOpsTechnologiesS.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/drupal7.jpg",
+            "cloudinit": false,
             "code": {
                 "variables": {
                     "ROOT_PASS": {
@@ -309,10 +309,10 @@
         {
             "id": "5",
             "name": "etherpad",
-            "image-name": "turnkey-etherpad-13.0-wheezy-amd64.img",
             "image-id": "094ef1ad-dc40-486b-ab8e-54e3bfc13f67",
             "organization": "StackOpsTechnologiesS.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/etherpad.jpg",
+            "cloudinit": false,
             "code": {
                 "variables": {
                     "ROOT_PASS": {
@@ -360,6 +360,49 @@
                     "APP_PASS_DESC": "",
                     "APP_EMAIL_DESC": "",
                     "creation_success": "Instanciacreadacorrectamente!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "443",
+                    "12320",
+                    "12321"
+                ],
+                "udp": [],
+                "icmp": []
+            },
+            "flavors": [
+                "19",
+                "20",
+                "21",
+                "27",
+                "28",
+                "29"
+            ]
+        },
+        {
+            "id": "6",
+            "name": "Centos 6.5",
+            "image-id": "85da1e36-4720-424d-a88d-1e27a423b5ab",
+            "organization": "StackOpsTechnologiesS.L.",
+            "icon": "https://lh3.googleusercontent.com/r58wKFcu7H6V_1l7KrDqG4tc598R5Dophj4KfYCuY9B-fZDzGEjoUSkYFrZrD2dQK4SEgA=s190",
+            "cloudinit": true,
+            "code": {
+                "variables": {},
+                "content": "#cloud-config;chpasswd:; list: |;   root:stackops;   cloud-user:stackops; expire: False;ssh_pwauth: True"
+            },
+            "labels": {
+                "en": {
+                    "resume": "Linux distribution",
+                    "description": "CentOS is a Linux distribution that attempts to provide a free, enterprise-class, community-supported computing platform which aims to be functionally compatible with its upstream source, Red Hat Enterprise Linux (RHEL).",
+                    "creation_success": "Instancecreated!"
+                },
+                "es": {
+                    "resume": "Sistema operativo de código abierto",
+                    "description": "Es un sistema operativo de código abierto, basado en la distribución Red Hat Enterprise Linux, operándose de manera similar, y cuyo objetivo es ofrecer al usuario un software de 'clase empresarial' gratuito. Se define como robusto, estable y fácil de instalar y utilizar. Desde la versión 5, cada lanzamiento recibe soporte durante diez años, por lo que la actual versión 7 recibirá actualizaciones de seguridad hasta el 30 de junio de 2024.",
+                    "creation_success": "Instancecreated!"
                 }
             },
             "ports": {
