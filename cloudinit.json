@@ -24,6 +24,8 @@
                 "en": {
                     "resume": "Run dynamic web sites and servers",
                     "description": "LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It includes Linux, Apache, MySQL, and PHP/Python/Perl and is considered by many the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.",
+                    "ROOT_PASS": "Root password",
+                    "DB_PASS": "Database password",
                     "ROOT_PASS_DESC": "Password of the root used",
                     "DB_PASS_DESC": "Password of the database root",
                     "creation_success": "Instance created!"
