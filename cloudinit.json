@@ -2,10 +2,71 @@
     "appliances": [
         {
             "id": "1",
-            "name": "bugzilla",
-            "image-id": "498f8b84-69a8-4f5d-9758-d259d7013e34",
+            "name": "lamp",
+            "image-id": "bc76ed3e-4ad5-4073-b8b6-4564137208a4",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/bugzilla.jpg",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/lamp.jpg",
+            "cloudinit": false,
+            "code": {
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    },
+                    "DB_PASS": {
+                        "value": "dbpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#!/bin/bash -e\rcat>/etc/inithooks.conf<<EOF\rexport HUB_APIKEY=SKIP\rexport ROOT_PASS=userpass\rexport SEC_UPDATES=FORCE\rexport DB_PASS=dbpass\rEOF"
+            },
+            "labels": {
+                "en": {
+                    "resume": "Run dynamic web sites and servers",
+                    "description": "LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It includes Linux, Apache, MySQL, and PHP/Python/Perl and is considered by many the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.",
+                    "ROOT_PASS_DESC": "Password of the root used",
+                    "DB_PASS_DESC": "Password of the database root",
+                    "creation_success": "Instance created!"
+                },
+                "es": {
+                    "resume": "Ejecuta webs dinámicas y servidores",
+                    "description": "LAMP es una plataforma web de código abierto muy popular utilizada para ejecutar sitios web dinámicos y servidores. Incluye Linux, Apache, MySQL y PHP / Python / Perl y es considerada por muchos la plataforma de elección para el desarrollo y despliegue de aplicaciones web de alto rendimiento que requieren una base sólida y fiable. ",
+                    "ROOT_PASS": "Contraseña root",
+                    "DB_PASS": "Contraseña root base de datos",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "DB_PASS_DESC": "Contraseña para el root de la base de datos",
+                    "creation_success": "Instancia creada correctamente!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "443",
+                    "12320",
+                    "12320",
+                    "12321"
+                ],
+                "udp": [
+                    "22"
+                ],
+                "icmp": []
+            },
+            "flavors": [
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
+            "id": "2",
+            "name": "wordpress",
+            "image-id": "0ed90bbb-b7f2-46e0-93e5-cd20232a99e9",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/wordpress.jpg",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -30,29 +91,29 @@
             },
             "labels": {
                 "en": {
-                    "resume": "Cutting Edge Content Management",
-                    "description": "Joomla! is an award-winning Content Management System (CMS) for building websites as well as a Model-view-controller (MVC) Web Application Development framework. Features include page caching to improve performance, RSS feeds, printable versions of pages, news flashes, blogs, polls, website searching, and language internationalization. ",
+                    "resume": "CMS based on PHP and MySQL",
+                    "description": "WordPress is a free and open-source tool and a content management system (CMS) based on PHP and MySQL. Features include a plugin architecture and a template system. ",
                     "ROOT_PASS": "Root password",
-                    "DB_PASS": "Database password",
-                    "APP_PASS": "App password",
-                    "APP_EMAIL": "App email",
-                    "ROOT_PASS_DESC": "Password to the root used",
-                    "DB_PASS_DESC": "Password to the database",
-                    "APP_PASS_DESC": "Password used to the app",
-                    "APP_EMAIL_DESC": "Contact email",
+                    "DB_PASS": "Database root password",
+                    "APP_PASS": "Wordpress admin password",
+                    "APP_EMAIL": "Wordpress admin email",
+                    "ROOT_PASS_DESC": "Password to root user",
+                    "DB_PASS_DESC": "Password to the database root",
+                    "APP_PASS_DESC": "Password used in the app for admin",
+                    "APP_EMAIL_DESC": "Contact email for admin",
                     "creation_success": "Instance created!"
                 },
                 "es": {
-                    "resume": "Cutting Edge Content Management",
-                    "description": "Joomla! is an award-winning Content Management System (CMS) for building websites as well as a Model-view-controller (MVC) Web Application Development framework. Features include page caching to improve performance, RSS feeds, printable versions of pages, news flashes, blogs, polls, website searching, and language internationalization. ",
-                    "ROOT_PASS": "Contraseña root",
-                    "DB_PASS": "Contraseña base de datos",
-                    "APP_PASS": "Contraseña de aplicación",
-                    "APP_EMAIL": "Email de aplicación",
+                    "resume": "CMS basado en PHP y MySQL",
+                    "description": "WordPress es una herramienta gratuita y de código abierto y un sistema de gestión de contenidos (CMS) basado en PHP y MySQL. Las características incluyen una arquitectura de plugin y un sistema de plantillas. ",
+                    "ROOT_PASS": "Contraseña de root",
+                    "DB_PASS": "Contraseña del root de la base de datos",
+                    "APP_PASS": "Contraseña de admin de Wordpress",
+                    "APP_EMAIL": "Email de admin",
                     "ROOT_PASS_DESC": "Contraseña para el usuario root",
-                    "DB_PASS_DESC": "Contraseña para la base de datos",
-                    "APP_PASS_DESC": "Contraseña de la aplicación",
-                    "APP_EMAIL_DESC": "Email de contacto",
+                    "DB_PASS_DESC": "Contraseña para el root de la base de datos",
+                    "APP_PASS_DESC": "Contraseña de usuario admin",
+                    "APP_EMAIL_DESC": "Email de admin",
                     "creation_success": "Instancia creada correctamente!"
                 }
             },
@@ -70,20 +131,20 @@
                 "icmp": []
             },
             "flavors": [
-                "19",
                 "20",
                 "21",
                 "22",
                 "23",
-                "24"
+                "24",
+                "25"
             ]
         },
         {
-            "id": "2",
-            "name": "django",
-            "image-id": "4c59c935-acb4-4256-a605-9d34f888b6dd",
+            "id": "3",
+            "name": "fileserver",
+            "image-id": "174e1354-02f7-4acb-8a20-c3942b0f6c5a",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/django.jpg",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/fileserver.jpg",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -91,74 +152,61 @@
                         "value": "userpass",
                         "constraint": ""
                     },
-                    "DB_PASS": {
-                        "value": "dbpass",
-                        "constraint": ""
-                    },
                     "APP_PASS": {
-                        "value": "wpass",
+                        "value": "ajapass",
                         "constraint": ""
-                    },
-                    "APP_EMAIL": {
-                        "value": "email",
-                        "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\rcat>/etc/inithooks.conf<<EOF\rexport HUB_APIKEY=SKIP\rexport ROOT_PASS=userpass\rexport SEC_UPDATES=FORCE\rexport DB_PASS=dbpass\rexport APP_PASS=wpass\rexport APP_EMAIL=email\rEOF"
+                "content": "#!/bin/bash -e\rcat>/etc/inithooks.conf<<EOF\rexport HUB_APIKEY=SKIP\rexport ROOT_PASS=userpass\rexport SEC_UPDATES=FORCE\rexport APP_PASS=ajapass\rEOF"
             },
             "labels": {
                 "en": {
-                    "resume": "High-level Python Web Framework",
-                    "description": "Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Python's equivalent to the famous Ruby on rails, Django lets you build high-performing, elegant Web applications quickly. Django focuses on automating as much as possible and adhering to the Don't Repeat Yourself(DRY)principle.",
-                    "ROOT_PASS": "Rootpassword",
-                    "DB_PASS": "Databasepassword",
-                    "APP_PASS": "Apppassword",
-                    "APP_EMAIL": "Appemail",
-                    "ROOT_PASS_DESC": "",
-                    "DB_PASS_DESC": "",
-                    "APP_PASS_DESC": "",
-                    "APP_EMAIL_DESC": "",
-                    "creation_success": "Instancecreated!"
+                    "resume": "File sharing and management",
+                    "description": "An easy to use file server that combines Windows-compatible network file sharing, with an advanced web based file manager. Includes support for SMB, SFTP and rsync file transfer protocols. The server is configured to allow server users to manage files in private or public storage. Based on Samba and AjaXplorer. ",
+                    "ROOT_PASS": "Root password",
+                    "APP_PASS": "Fileserver admin password",
+                    "ROOT_PASS_DESC": "Password to root user",
+                    "APP_PASS_DESC": "Password used in the app for admin in local",
+                    "creation_success": "Instance created!"
                 },
                 "es": {
-                    "resume": "High-levelPythonWebFramework",
-                    "description": "Django is a high-level PythonWebframework that encourages rapid development and clean pragmatic design. Pythons equivalent to the famous Ruby on rails. Djangoletsyoubuildhigh-performing                    elegantWebapplicationsquickly.DjangofocusesonautomatingasmuchaspossibleandadheringtotheDontRepeatYourself(DRY)principle.",
-                    "ROOT_PASS": "Contraseñaroot",
-                    "DB_PASS": "Contraseñabasededatos",
-                    "APP_PASS": "Contraseñadeaplicación",
-                    "APP_EMAIL": "Emaildeaplicación",
-                    "ROOT_PASS_DESC": "",
-                    "DB_PASS_DESC": "",
-                    "APP_PASS_DESC": "",
-                    "APP_EMAIL_DESC": "",
-                    "creation_success": "Instanciacreadacorrectamente!"
+                    "resume": "Intercambio y gestión de archivos",
+                    "description": "Un servidor de archivos fácil de usar que combina el intercambio de archivos compatible con Windows, con un avanzado gestor de archivos basado en web. Incluye soporte para los protocolos SMB, SFTP y transferencia de archivos rsync. El servidor está configurado para permitir que los usuarios administren archivos en almacenamiento privado o público. Basado en Samba y Ajaxplorer. ",
+                    "ROOT_PASS": "Contraseña de root",
+                    "APP_PASS": "Contraseña de admin de Fileserver",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "APP_PASS_DESC": "Contraseña de usuario admin local",
+                    "creation_success": "Instancia creada correctamente!"
                 }
             },
             "ports": {
                 "tcp": [
                     "22",
-                    "80",
+                    "139",
+                    "445",
                     "12320",
                     "12321"
                 ],
-                "udp": [],
+                "udp": [
+                    "22"
+                ],
                 "icmp": []
             },
             "flavors": [
-                "19",
                 "20",
                 "21",
                 "22",
                 "23",
-                "26"
+                "24",
+                "25"
             ]
         },
         {
-            "id": "3",
-            "name": "dokuwiki",
-            "image-id": "0a3cc9da-afcf-4b07-bdf6-04c70a989abd",
-            "organization": "StackOpsTechnologiesS.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/dokuwiki.jpg",
+            "id": "4",
+            "name": "redmine",
+            "image-id": "86835e2c-abe5-4426-8523-088003bb36e4",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/redmine.jpg",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -171,7 +219,7 @@
                         "constraint": ""
                     },
                     "APP_PASS": {
-                        "value": "wpass",
+                        "value": "rmpass",
                         "constraint": ""
                     },
                     "APP_EMAIL": {
@@ -179,34 +227,34 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash-e\rcat>/etc/inithooks.conf<<EOF\rexportHUB_APIKEY=SKIP\rexportROOT_PASS=userpass\rexportSEC_UPDATES=FORCE\rexportDB_PASS=dbpass\rexportAPP_PASS=wpass\rexportAPP_EMAIL=email\rEOF"
+                "content": "#!/bin/bash -e\rcat>/etc/inithooks.conf<<EOF\rexport HUB_APIKEY=SKIP\rexport ROOT_PASS=userpass\rexport SEC_UPDATES=FORCE\rexport DB_PASS=dbpass\rexport APP_PASS=rmpass\rexport APP_EMAIL=email\rEOF"
             },
             "labels": {
                 "en": {
-                    "resume": "DocumentationWikiPlatform",
-                    "description": "DokuWikiiswikisoftwareaimedatsmallcompaniesdocumentationneeds.Itworksonplaintextfilesandthusneedsnodatabase.Ithasasimplebutpowerfulsyntax(similartotheoneusedbyMediaWiki)whichmakessurethedatafilesremainreadableoutsidethewikiandeasesthecreationofstructuredtexts.",
-                    "ROOT_PASS": "Rootpassword",
-                    "DB_PASS": "Databasepassword",
-                    "APP_PASS": "Apppassword",
-                    "APP_EMAIL": "Appemail",
-                    "ROOT_PASS_DESC": "",
-                    "DB_PASS_DESC": "",
-                    "APP_PASS_DESC": "",
-                    "APP_EMAIL_DESC": "",
-                    "creation_success": "Instancecreated!"
+                    "resume": "Project management and tracking",
+                    "description": "Redmine is a Rails web application that provides integrated project management features, issue tracking, and support for multiple version control programs. It includes calendar and gantt charts to aid visual representation of projects and their deadlines. It also features multi-project support, role based access control, a per-project wiki, and project forums. ",
+                    "ROOT_PASS": "Root password",
+                    "DB_PASS": "Database password",
+                    "APP_PASS": "Admin password",
+                    "APP_EMAIL": "Admin email",
+                    "ROOT_PASS_DESC": "Root user password",
+                    "DB_PASS_DESC": "Database root user password ",
+                    "APP_PASS_DESC": "Redmine admin user password ",
+                    "APP_EMAIL_DESC": "Redmine admin user email",
+                    "creation_success": "Instance created!"
                 },
                 "es": {
-                    "resume": "DocumentationWikiPlatform",
-                    "description": "DokuWikiiswikisoftwareaimedatsmallcompaniesdocumentationneeds.Itworksonplaintextfilesandthusneedsnodatabase.Ithasasimplebutpowerfulsyntax(similartotheoneusedbyMediaWiki)whichmakessurethedatafilesremainreadableoutsidethewikiandeasesthecreationofstructuredtexts.",
-                    "ROOT_PASS": "Contraseñaroot",
-                    "DB_PASS": "Contraseñabasededatos",
-                    "APP_PASS": "Contraseñadeaplicación",
-                    "APP_EMAIL": "Emaildeaplicación",
-                    "ROOT_PASS_DESC": "",
-                    "DB_PASS_DESC": "",
-                    "APP_PASS_DESC": "",
-                    "APP_EMAIL_DESC": "",
-                    "creation_success": "Instanciacreadacorrectamente!"
+                    "resume": "Gestión y seguimiento de proyectos",
+                    "description": "Redmine es una aplicación web Rails que proporciona funciones integradas de gestión de proyectos, seguimiento de problemas y soporte para múltiples programas de control de versiones. Incluye calendario y gráficos gantt para ayudar a la representación visual de los proyectos y sus plazos. También cuenta con apoyo multi-proyecto, control de acceso basado en roles, un wiki por proyecto, y los foros del proyecto. ",
+                    "ROOT_PASS": "Contraseña root",
+                    "DB_PASS": "Contraseña base de datos",
+                    "APP_PASS": "Contraseña de admin",
+                    "APP_EMAIL": "Email de admin",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "DB_PASS_DESC": "Contraseña para el root de la base de datos",
+                    "APP_PASS_DESC": "Contraseña del admin para redmine",
+                    "APP_EMAIL_DESC": "Email del user admin",
+                    "creation_success": "Instancia creada correctamente!"
                 }
             },
             "ports": {
@@ -214,26 +262,102 @@
                     "22",
                     "80",
                     "443",
+                    "8080",
                     "12320",
                     "12321"
                 ],
-                "udp": [],
+                "udp": [
+                    "22"
+                ],
                 "icmp": []
             },
             "flavors": [
-                "19",
                 "20",
                 "21",
                 "22",
                 "23",
-                "27"
+                "24",
+                "25"
             ]
         },
         {
-            "id": "4",
+            "id": "5",
+            "name": "domain-controller",
+            "image-id": "ccaec62c-965c-43cc-8673-b59957292510",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/domain-controller.jpg",
+            "cloudinit": false,
+            "code": {
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    },
+                    "APP_PASS": {
+                        "value": "dcpass",
+                        "constraint": ""
+                    },
+                    "APP_DOMAIN": {
+                        "value": "domain",
+                        "contraint": ""
+                    }
+                },
+                "content": "#!/bin/bash -e\rcat>/etc/inithooks.conf<<EOF\rexport HUB_APIKEY=SKIP\rexport ROOT_PASS=userpass\rexport SEC_UPDATES=FORCE\rexport APP_PASS=dcpass\rexport APP_DOMAIN=domain\rEOF"
+            },
+            "labels": {
+                "en": {
+                    "resume": "A Samba-based Windows PDC",
+                    "description": "A Samba-based Windows PDC (Primary Domain Controller) server (without the Windows) which is configured to support netlogon, network attached storage for domain users, roaming profiles and PnP printing services with an example PDF printing service. Includes a powerful web interface for configuring Samba and printing services. ",
+                    "ROOT_PASS": "Root password",
+                    "APP_PASS": "Admin password",
+                    "APP_DOMAIN": "Samba domain",
+                    "ROOT_PASS_DESC": "Root user password",
+                    "APP_PASS_DESC": "Ajaxplorer and Samba admin/administrator user password ",
+                    "APP_DOMAIN_DESC": "Domain to use",
+                    "creation_success": "Instance created!"
+                },
+                "es": {
+                    "resume": "Un servidor basado en Windows Samba PDC",
+                    "description": "Un servidor basado en Windows Samba PDC (Primary Domain Controller) (sin el Windows) que está configurado para apoyar netlogon, almacenamiento conectado a red para los usuarios de dominio, los perfiles móviles y servicios de impresión PnP con un servicio de impresión de ejemplo PDF. Incluye un potente interfaz web para la configuración de Samba y servicios de impresión. ",
+                    "ROOT_PASS": "Contraseña root",
+                    "APP_PASS": "Contraseña de admin",
+                    "APP_DOMAIN": "Dominio",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "APP_PASS_DESC": "Contraseña del admin para Ajaxplorer y Samba",
+                    "APP_EMAIL_DESC": "Dominio a utilizar",
+                    "creation_success": "Instancia creada correctamente!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "139",
+                    "443",
+                    "445",
+                    "631",
+                    "12320",
+                    "12321"
+                ],
+                "udp": [
+                    "22"
+                ],
+                "icmp": []
+            },
+            "flavors": [
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
+            "id": "6",
             "name": "drupal7",
             "image-id": "8fb9d6c3-6393-426a-b8cf-9e456f1d3b1c",
-            "organization": "StackOpsTechnologiesS.L.",
+            "organization": "StackOps Technologies S.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/drupal7.jpg",
             "cloudinit": false,
             "code": {
@@ -247,7 +371,7 @@
                         "constraint": ""
                     },
                     "APP_PASS": {
-                        "value": "wpass",
+                        "value": "dpass",
                         "constraint": ""
                     },
                     "APP_EMAIL": {
@@ -255,34 +379,34 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash-e\rcat>/etc/inithooks.conf<<EOF\rexportHUB_APIKEY=SKIP\rexportROOT_PASS=userpass\rexportSEC_UPDATES=FORCE\rexportDB_PASS=dbpass\rexportAPP_PASS=wpass\rexportAPP_EMAIL=email\rEOF"
+                "content": "#!/bin/bash -e\rcat>/etc/inithooks.conf<<EOF\rexport HUB_APIKEY=SKIP\rexport ROOT_PASS=userpass\rexport SEC_UPDATES=FORCE\rexport DB_PASS=dbpass\rexport APP_PASS=dpass\rexport APP_EMAIL=email\rEOF"
             },
             "labels": {
                 "en": {
-                    "resume": "ContentManagementFramework",
-                    "description": "DrupalisanopensourcecontentmanagementplatformlicensedundertheGPL.Equippedwithapowerfulblendoffeatures                    Drupalcansupportavarietyofwebsitesrangingfrompersonalblogs                corporatebrochuresandlargecommunity-drivenwebsites.",
-                    "ROOT_PASS": "Rootpassword",
-                    "DB_PASS": "Databasepassword",
-                    "APP_PASS": "Apppassword",
-                    "APP_EMAIL": "Appemail",
-                    "ROOT_PASS_DESC": "",
-                    "DB_PASS_DESC": "",
-                    "APP_PASS_DESC": "",
-                    "APP_EMAIL_DESC": "",
-                    "creation_success": "Instancecreated!"
+                    "resume": "Open source content management platform",
+                    "description": "Drupal is an open source content management platform licensed under the GPL. Equipped with a powerful blend of features, Drupal can support a variety of websites ranging from personal blogs, corporate brochures and large community-driven websites. ",
+                    "ROOT_PASS": "Root password",
+                    "DB_PASS": "Database password",
+                    "APP_PASS": "Admin password",
+                    "APP_EMAIL": "Admin email",
+                    "ROOT_PASS_DESC": "Root user password",
+                    "DB_PASS_DESC": "Database root user password ",
+                    "APP_PASS_DESC": "Drupal7 admin user password ",
+                    "APP_EMAIL_DESC": "Drupal7 admin user email",
+                    "creation_success": "Instance created!"
                 },
                 "es": {
-                    "resume": "ContentManagementFramework",
-                    "description": "DrupalisanopensourcecontentmanagementplatformlicensedundertheGPL.Equippedwithapowerfulblendoffeatures                   Drupalcansupportavarietyofwebsitesrangingfrompersonalblogs                    corporatebrochuresandlargecommunity-drivenwebsites.",
-                    "ROOT_PASS": "Contraseñaroot",
-                    "DB_PASS": "Contraseñabasededatos",
-                    "APP_PASS": "Contraseñadeaplicación",
-                    "APP_EMAIL": "Emaildeaplicación",
-                    "ROOT_PASS_DESC": "",
-                    "DB_PASS_DESC": "",
-                    "APP_PASS_DESC": "",
-                    "APP_EMAIL_DESC": "",
-                    "creation_success": "Instanciacreadacorrectamente!"
+                    "resume": "Plataforma de gestión de contenidos",
+                    "description": "Drupal es una plataforma de gestión de contenidos de código abierto bajo la licencia GPL. Equipado con una potente mezcla de características, Drupal puede soportar una variedad de sitios web que van desde blogs personales, folletos corporativos y grandes sitios web impulsados por la comunidad ",
+                    "ROOT_PASS": "Contraseña root",
+                    "DB_PASS": "Contraseña base de datos",
+                    "APP_PASS": "Contraseña de admin",
+                    "APP_EMAIL": "Email de admin",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "DB_PASS_DESC": "Contraseña para el root de la base de datos",
+                    "APP_PASS_DESC": "Contraseña del admin de Drupal7",
+                    "APP_EMAIL_DESC": "Email del user admin de Drupal7",
+                    "creation_success": "Instancia creada correctamente!"
                 }
             },
             "ports": {
@@ -294,24 +418,26 @@
                     "12321",
                     "12322"
                 ],
-                "udp": [],
+                "udp": [
+                    "22"
+                ],
                 "icmp": []
             },
             "flavors": [
-                "19",
                 "20",
                 "21",
-                "28",
-                "29",
-                "27"
+                "22",
+                "23",
+                "24",
+                "25"
             ]
         },
         {
-            "id": "5",
-            "name": "etherpad",
-            "image-id": "094ef1ad-dc40-486b-ab8e-54e3bfc13f67",
-            "organization": "StackOpsTechnologiesS.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/etherpad.jpg",
+            "id": "7",
+            "name": "owncloud",
+            "image-id": "e5f35ce4-331f-4ef9-84d3-4ba075ac0854",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/owncloud.jpg",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -324,42 +450,34 @@
                         "constraint": ""
                     },
                     "APP_PASS": {
-                        "value": "wpass",
+                        "value": "ocpass",
                         "constraint": ""
-                    },
-                    "APP_EMAIL": {
-                        "value": "email",
-                        "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash-e\rcat>/etc/inithooks.conf<<EOF\rexportHUB_APIKEY=SKIP\rexportROOT_PASS=userpass\rexportSEC_UPDATES=FORCE\rexportDB_PASS=dbpass\rexportAPP_PASS=wpass\rexportAPP_EMAIL=email\rEOF"
+                "content": "#!/bin/bash -e\rcat>/etc/inithooks.conf<<EOF\rexport HUB_APIKEY=SKIP\rexport ROOT_PASS=userpass\rexport SEC_UPDATES=FORCE\rexport DB_PASS=dbpass\rexport APP_PASS=ocpass\rEOF"
             },
             "labels": {
                 "en": {
-                    "resume": "Real-timedocumentcollaboration",
-                    "description": "EtherpadLiteisareal-timecollaborativeeditor                    sortoflikeaweb-basedmultiplayerNotepadthatallowsgroupsofuserstosimultaneouslyeditatextdocument           withtheabilitytodisplayeachauthor'stextintheirowncolor.Thereisalsoachatboxinthesidebartoallowmetacommunication.",
-                    "ROOT_PASS": "Rootpassword",
-                    "DB_PASS": "Databasepassword",
-                    "APP_PASS": "Apppassword",
-                    "APP_EMAIL": "Appemail",
-                    "ROOT_PASS_DESC": "",
-                    "DB_PASS_DESC": "",
-                    "APP_PASS_DESC": "",
-                    "APP_EMAIL_DESC": "",
-                    "creation_success": "Instancecreated!"
+                    "resume": "File storage",
+                    "description": "ownCloud helps store your files, folders, contacts, photo galleries, calendars and more on a server of your choosing. Access that folder from your mobile device, your desktop, or a web browser, wherever you are, when you need it. ",
+                    "ROOT_PASS": "Root password",
+                    "DB_PASS": "Database password",
+                    "APP_PASS": "Admin password",
+                    "ROOT_PASS_DESC": "Root user password",
+                    "DB_PASS_DESC": "Database root user password ",
+                    "APP_PASS_DESC": "Owncloud admin user password ",
+                    "creation_success": "Instance created!"
                 },
                 "es": {
-                    "resume": "Real-timedocumentcollaboration",
-                    "description": "EtherpadLiteisareal-timecollaborativeeditor                   sortoflikeaweb-basedmultiplayerNotepadthatallowsgroupsofuserstosimultaneouslyeditatextdocument                    withtheabilitytodisplayeachauthor'stextintheirowncolor.Thereisalsoachatboxinthesidebartoallowmetacommunication.",
-                    "ROOT_PASS": "Contraseñaroot",
-                    "DB_PASS": "Contraseñabasededatos",
-                    "APP_PASS": "Contraseñadeaplicación",
-                    "APP_EMAIL": "Emaildeaplicación",
-                    "ROOT_PASS_DESC": "",
-                    "DB_PASS_DESC": "",
-                    "APP_PASS_DESC": "",
-                    "APP_EMAIL_DESC": "",
-                    "creation_success": "Instanciacreadacorrectamente!"
+                    "resume": "Almacenamiento de archivos",
+                    "description": "ownCloud te ayuda a almacenar tus archivos, carpetas, contactos, galerías de fotos, calendarios y mucho más en un servidor de tu elección. Accede a tus carpeta desde tu dispositivo móvil, el escritorio, o un navegador web, donde quiera que estés, cuando lo necesites. ",
+                    "ROOT_PASS": "Contraseña root",
+                    "DB_PASS": "Contraseña base de datos",
+                    "APP_PASS": "Contraseña de admin",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "DB_PASS_DESC": "Contraseña para el root de la base de datos",
+                    "APP_PASS_DESC": "Contraseña del admin de Owncloud",
+                    "creation_success": "Instancia creada correctamente!"
                 }
             },
             "ports": {
@@ -368,22 +486,87 @@
                     "80",
                     "443",
                     "12320",
-                    "12321"
+                    "12321",
+                    "12322"
                 ],
-                "udp": [],
+                "udp": [
+                    "22"
+                ],
                 "icmp": []
             },
             "flavors": [
-                "19",
                 "20",
                 "21",
-                "27",
-                "28",
-                "29"
+                "22",
+                "23",
+                "24",
+                "25"
             ]
         },
         {
-            "id": "6",
+            "id": "8",
+            "name": "mysql",
+            "image-id": "4b91a24e-ffe2-4c82-be33-d5abec3783fd",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/mysql.jpg",
+            "cloudinit": false,
+            "code": {
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    },
+                    "DB_PASS": {
+                        "value": "dbpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#!/bin/bash -e\rcat>/etc/inithooks.conf<<EOF\rexport HUB_APIKEY=SKIP\rexport ROOT_PASS=userpass\rexport SEC_UPDATES=FORCE\rexport DB_PASS=dbpass\rEOF"
+            },
+            "labels": {
+                "en": {
+                    "resume": "The most popular open source database",
+                    "description": "MySQL is the world’s most popular open source database, enabling the cost-effective delivery of reliable, high-performance and scalable Web-based and embedded database applications. ",
+                    "ROOT_PASS": "Root password",
+                    "DB_PASS": "Database password",
+                    "ROOT_PASS_DESC": "Root user password",
+                    "DB_PASS_DESC": "Database root user password ",
+                    "creation_success": "Instance created!"
+                },
+                "es": {
+                    "resume": "La BBDD de código abierto más popular",
+                    "description": "MySQL es la base de datos de código abierto más popular del mundo, lo que permite la entrega rentable de aplicaciones de bases de datos fiables, de alto rendimiento, escalables, integradas y basadas en web. ",
+                    "ROOT_PASS": "Contraseña root",
+                    "DB_PASS": "Contraseña base de datos",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "DB_PASS_DESC": "Contraseña para el root de la base de datos",
+                    "creation_success": "Instancia creada correctamente!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "443",
+                    "3306",
+                    "12320",
+                    "12321"
+                ],
+                "udp": [
+                    "22"
+                ],
+                "icmp": []
+            },
+            "flavors": [
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
+            "id": "9",
             "name": "Centos 6.5",
             "image-id": "85da1e36-4720-424d-a88d-1e27a423b5ab",
             "organization": "StackOpsTechnologiesS.L.",
@@ -391,7 +574,7 @@
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config;chpasswd:; list: |;   root:stackops;   cloud-user:stackops; expire: False;ssh_pwauth: True"
+                "content": "#cloud-config;chpasswd:; list: |; root:stackops; cloud-user:stackops; expire: False;ssh_pwauth: True"
             },
             "labels": {
                 "en": {
