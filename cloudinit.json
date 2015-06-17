@@ -88,7 +88,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=wpass\nexport APP_EMAIL=email\nEOF"
+                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=wpass\nexport APP_EMAIL=email\nEOF\nsed -i 's/cdn.debian.net/http.debian.net/' /etc/apt/sources.list.d/*"
             },
             "labels": {
                 "en": {
