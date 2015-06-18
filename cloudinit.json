@@ -658,7 +658,7 @@
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n root:stackops\n centos:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   centos:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
             },
             "labels": {
                 "en": {
@@ -700,7 +700,7 @@
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   debian:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n-sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   debian:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
@@ -742,7 +742,7 @@
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   debian:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n-sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   debian:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
@@ -784,7 +784,7 @@
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n-sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
             },
             "labels": {
                 "en": {
@@ -826,7 +826,7 @@
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n-sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
             },
             "labels": {
                 "en": {
@@ -868,7 +868,7 @@
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n-sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
             },
             "labels": {
                 "en": {
