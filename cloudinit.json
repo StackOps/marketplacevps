@@ -2,7 +2,7 @@
     "appliances": [
         {
             "id": "1",
-            "name": "lamp",
+            "name": "Lamp",
             "image-id": "bc76ed3e-4ad5-4073-b8b6-4564137208a4",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/lamp.png",
@@ -64,7 +64,7 @@
         },
         {
             "id": "2",
-            "name": "wordpress",
+            "name": "Wordpress",
             "image-id": "0ed90bbb-b7f2-46e0-93e5-cd20232a99e9",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/wordpress.png",
@@ -142,7 +142,7 @@
         },
         {
             "id": "3",
-            "name": "fileserver",
+            "name": "File Server",
             "image-id": "174e1354-02f7-4acb-8a20-c3942b0f6c5a",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/fileserver.jpg",
@@ -204,7 +204,7 @@
         },
         {
             "id": "4",
-            "name": "redmine",
+            "name": "Redmine",
             "image-id": "86835e2c-abe5-4426-8523-088003bb36e4",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/redmine.png",
@@ -283,7 +283,7 @@
         },
         {
             "id": "5",
-            "name": "domain-controller",
+            "name": "Domain Controller",
             "image-id": "ccaec62c-965c-43cc-8673-b59957292510",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/domain-controller.jpg",
@@ -356,7 +356,7 @@
         },
         {
             "id": "6",
-            "name": "drupal7",
+            "name": "Drupal 7",
             "image-id": "8fb9d6c3-6393-426a-b8cf-9e456f1d3b1c",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/drupal.png",
@@ -435,7 +435,7 @@
         },
         {
             "id": "7",
-            "name": "owncloud",
+            "name": "Owncloud",
             "image-id": "e5f35ce4-331f-4ef9-84d3-4ba075ac0854",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/owncloud.png",
@@ -506,7 +506,7 @@
         },
         {
             "id": "8",
-            "name": "mysql",
+            "name": "MySQL",
             "image-id": "4b91a24e-ffe2-4c82-be33-d5abec3783fd",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/mysql.png",
