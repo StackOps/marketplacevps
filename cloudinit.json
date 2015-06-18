@@ -906,7 +906,7 @@
             "name": "Ubuntu 12.04 LTS",
             "image-id": "4daa5361-5a16-44bc-8714-e990f169a826",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh4.googleusercontent.com/FyBHK_ay2D4KI5sPS9LDimftJeaGlIKsv_XTkx8cQuwuuuQFgRDwGNf4_Fd3Z3H0xYrOrA=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/ubuntu-logo2.png",
             "cloudinit": false,
             "code": {
                 "variables": {},
@@ -990,7 +990,7 @@
             "name": "Ubuntu 13.10",
             "image-id": "e210bfa5-99c1-4aed-b7a1-8468bdbbe2b7",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh4.googleusercontent.com/FyBHK_ay2D4KI5sPS9LDimftJeaGlIKsv_XTkx8cQuwuuuQFgRDwGNf4_Fd3Z3H0xYrOrA=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/ubuntu-logo2.png",
             "cloudinit": false,
             "code": {
                 "variables": {},
