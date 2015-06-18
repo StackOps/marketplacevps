@@ -5,7 +5,7 @@
             "name": "lamp",
             "image-id": "bc76ed3e-4ad5-4073-b8b6-4564137208a4",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/lamp.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/lamp.png",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -67,7 +67,7 @@
             "name": "wordpress",
             "image-id": "0ed90bbb-b7f2-46e0-93e5-cd20232a99e9",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/wordpress.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/wordpress.png",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -207,7 +207,7 @@
             "name": "redmine",
             "image-id": "86835e2c-abe5-4426-8523-088003bb36e4",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/redmine.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/redmine.png",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -359,7 +359,7 @@
             "name": "drupal7",
             "image-id": "8fb9d6c3-6393-426a-b8cf-9e456f1d3b1c",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/drupal7.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/drupal.png",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -438,7 +438,7 @@
             "name": "owncloud",
             "image-id": "e5f35ce4-331f-4ef9-84d3-4ba075ac0854",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/owncloud.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/owncloud.png",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -509,7 +509,7 @@
             "name": "mysql",
             "image-id": "4b91a24e-ffe2-4c82-be33-d5abec3783fd",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/mysql.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/mysql.png",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -570,11 +570,11 @@
             "name": "Centos 6.4",
             "image-id": "13e3a912-a0b6-4c6e-adeb-f05331a54e0a",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh3.googleusercontent.com/dCsktFWTpOBEursXj1DtGtqUJVB2L_tFFVFbi0jPUQzGZFOuJn7pAeT0pw-tect1QCRQow=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/centos-logo2.png",
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n root:stackops\n cloud-user:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   cloud-user:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
             },
             "labels": {
                 "en": {
@@ -612,7 +612,7 @@
             "name": "Centos 6.5",
             "image-id": "85da1e36-4720-424d-a88d-1e27a423b5ab",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh3.googleusercontent.com/dCsktFWTpOBEursXj1DtGtqUJVB2L_tFFVFbi0jPUQzGZFOuJn7pAeT0pw-tect1QCRQow=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/centos-logo2.png",
             "cloudinit": true,
             "code": {
                 "variables": {},
@@ -654,7 +654,7 @@
             "name": "Centos 7",
             "image-id": "d7dead23-3b7f-4b81-8d6f-f5816a71b054",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh3.googleusercontent.com/dCsktFWTpOBEursXj1DtGtqUJVB2L_tFFVFbi0jPUQzGZFOuJn7pAeT0pw-tect1QCRQow=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/centos-logo2.png",
             "cloudinit": true,
             "code": {
                 "variables": {},
@@ -696,7 +696,7 @@
             "name": "Debian 7",
             "image-id": "956294f7-1681-4583-b316-0a4f4cc13368",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh3.googleusercontent.com/-Av2KcitubGsI3YvXU55oeOaBlexdUQGH2xbyrcmS8fLmkvac1MD-_EewAIS3TS3S9aKbg=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/debian-logo2.png",
             "cloudinit": true,
             "code": {
                 "variables": {},
@@ -738,7 +738,7 @@
             "name": "Debian 8",
             "image-id": "8e6fc5fa-3e5c-4055-8bc2-a867c1e28cb9",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh3.googleusercontent.com/-Av2KcitubGsI3YvXU55oeOaBlexdUQGH2xbyrcmS8fLmkvac1MD-_EewAIS3TS3S9aKbg=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/debian-logo2.png",
             "cloudinit": true,
             "code": {
                 "variables": {},
@@ -780,7 +780,7 @@
             "name": "Fedora 19",
             "image-id": "22c6bd09-290d-4fc2-ae6e-41a190d42f73",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh3.googleusercontent.com/swHFZLIKxVjiGZP1N8ieRRJX8H6Xya0N1a51-B3u5BxLBvph3dUy4MlpjqQOMEFwPf1fFg=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fedora-logo.png",
             "cloudinit": true,
             "code": {
                 "variables": {},
@@ -822,7 +822,7 @@
             "name": "Fedora 20",
             "image-id": "9e5220ce-1d87-4b57-aea6-b2bf85aaa665",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh3.googleusercontent.com/swHFZLIKxVjiGZP1N8ieRRJX8H6Xya0N1a51-B3u5BxLBvph3dUy4MlpjqQOMEFwPf1fFg=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fedora-logo.png",
             "cloudinit": true,
             "code": {
                 "variables": {},
@@ -864,7 +864,7 @@
             "name": "Fedora 21",
             "image-id": "daf5f9fd-a2de-4308-b9d4-8b99c8cf77bd",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh3.googleusercontent.com/swHFZLIKxVjiGZP1N8ieRRJX8H6Xya0N1a51-B3u5BxLBvph3dUy4MlpjqQOMEFwPf1fFg=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fedora-logo.png",
             "cloudinit": true,
             "code": {
                 "variables": {},
@@ -948,7 +948,7 @@
             "name": "Ubuntu 13.04",
             "image-id": "c4d67783-10a9-428d-9e5e-1beb5ab05222",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh4.googleusercontent.com/FyBHK_ay2D4KI5sPS9LDimftJeaGlIKsv_XTkx8cQuwuuuQFgRDwGNf4_Fd3Z3H0xYrOrA=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/ubuntu-logo2.png",
             "cloudinit": false,
             "code": {
                 "variables": {},
@@ -1032,7 +1032,7 @@
             "name": "Ubuntu 14.04 LTS",
             "image-id": "44288012-b805-455f-a21f-74ab36c46362",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh4.googleusercontent.com/FyBHK_ay2D4KI5sPS9LDimftJeaGlIKsv_XTkx8cQuwuuuQFgRDwGNf4_Fd3Z3H0xYrOrA=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/ubuntu-logo2.png",
             "cloudinit": false,
             "code": {
                 "variables": {},
@@ -1074,7 +1074,7 @@
             "name": "Ubuntu 14.10",
             "image-id": "4273e6d3-5944-457c-9396-d87946e763f6",
             "organization": "StackOpsTechnologiesS.L.",
-            "icon": "https://lh4.googleusercontent.com/FyBHK_ay2D4KI5sPS9LDimftJeaGlIKsv_XTkx8cQuwuuuQFgRDwGNf4_Fd3Z3H0xYrOrA=s190",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/ubuntu-logo2.png",
             "cloudinit": false,
             "code": {
                 "variables": {},
