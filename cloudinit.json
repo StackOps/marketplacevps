@@ -782,7 +782,7 @@
             "cloudinit": true,
             "code": {
                 "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/#PermitRootLogin/PermitRootLogin/' /etc/sshd_config\n- service sshd restart"
             },
             "labels": {
                 "en": {
