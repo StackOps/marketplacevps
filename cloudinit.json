@@ -1108,6 +1108,48 @@
                 "24",
                 "25"
             ]
+        },
+        {
+            "id": "22",
+            "name": "Ubuntu 15.04",
+            "image-id": "f503445c-1649-49fb-a527-35f7441b85f9",
+            "organization": "StackOpsTechnologiesS.L.",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/ubuntu-logo2.png",
+            "cloudinit": false,
+            "code": {
+                "variables": {},
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   ubuntu:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+            },
+            "labels": {
+                "en": {
+                    "resume": "Operating system based on GNU/Linux",
+                    "description": "Ubuntu is an operating system based on GNU/Linux. It is distributed as free software and includes its own desktop environment.\nUbuntu has everything you need for your organization, school, home or business. All the essential applications, such as an office suite, browser, e-mail and media applications are preinstalled and thousands of games and applications are available in the Ubuntu Software Center.\nUbuntu 15.04 (code name Vivid Vervet) was released in April 2015.",
+                    "creation_success": "Instancecreated!"
+                },
+                "es": {
+                    "resume": "Sistema operativo basado en GNU/Linux",
+                    "description": "Ubuntu es un sistema operativo basado en GNU/Linux. Se distribuye como software libre e incluye su propio entorno de escritorio.\nUbuntu tiene todo lo que necesita para su organización, escuela, hogar o empresa. Todas las aplicaciones esenciales, como una suite ofimática, navegadores, correo electrónico y aplicaciones de medios de comunicación vienen preinstalados y miles de juegos y aplicaciones están disponibles en el centro de software de Ubuntu.\nUbuntu 15.04 (nombre clave Vivid Vervet) fue lanzado en abril de 2015.",
+                    "creation_success": "Instancecreated!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "443"
+                ],
+                "udp": [],
+                "icmp": ["-1"]
+            },
+            "flavors": [
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
         }
     ]
 }
