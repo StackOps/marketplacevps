@@ -436,7 +436,7 @@
         {
             "id": "7",
             "name": "Owncloud",
-            "image-id": "e5f35ce4-331f-4ef9-84d3-4ba075ac0854",
+            "image-id": "389d2519-647c-4d1e-9ce9-4cfa2f1ac619",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/owncloud.png",
             "cloudinit": false,
