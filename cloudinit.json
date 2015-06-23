@@ -3,7 +3,7 @@
         {
             "id": "1",
             "name": "Lamp",
-            "image-id": "bc76ed3e-4ad5-4073-b8b6-4564137208a4",
+            "image-id": "0b07b3ed-9195-4b84-ae8a-6443c3c0a9d1",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/lamp.png",
             "cloudinit": false,
