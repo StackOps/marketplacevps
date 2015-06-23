@@ -143,7 +143,7 @@
         {
             "id": "3",
             "name": "File Server",
-            "image-id": "b8eb4f90-c3a3-4e05-88cc-687323043ae1",
+            "image-id": "173f9c14-3a6b-45af-acdc-5fabd8e48786",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/fileserver.jpg",
             "cloudinit": false,
