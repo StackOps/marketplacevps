@@ -65,7 +65,7 @@
         {
             "id": "2",
             "name": "Wordpress",
-            "image-id": "0ed90bbb-b7f2-46e0-93e5-cd20232a99e9",
+            "image-id": "5c1b5ac9-6de7-415b-8e69-a4fb4fb17646",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/wordpress.png",
             "cloudinit": false,
