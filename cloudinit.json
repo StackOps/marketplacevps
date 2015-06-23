@@ -205,7 +205,7 @@
         {
             "id": "4",
             "name": "Redmine",
-            "image-id": "86835e2c-abe5-4426-8523-088003bb36e4",
+            "image-id": "c85d0ac9-d750-48ef-8471-f20939a1ea71",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/redmine.png",
             "cloudinit": false,
