@@ -284,7 +284,7 @@
         {
             "id": "5",
             "name": "Domain Controller",
-            "image-id": "ccaec62c-965c-43cc-8673-b59957292510",
+            "image-id": "3bb8ef13-77a4-4f21-8e81-1888f7faf978",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://www.turnkeylinux.org/files/images/icons/domain-controller.jpg",
             "cloudinit": false,
