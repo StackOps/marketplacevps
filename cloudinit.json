@@ -357,7 +357,7 @@
         {
             "id": "6",
             "name": "Drupal 7",
-            "image-id": "8fb9d6c3-6393-426a-b8cf-9e456f1d3b1c",
+            "image-id": "1dcbc4ca-cacd-4175-ba74-c23ea55c6cf2",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/drupal.png",
             "cloudinit": false,
