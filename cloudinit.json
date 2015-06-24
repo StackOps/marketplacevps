@@ -830,7 +830,7 @@
             "name": "MongoDB",
             "image-id": "5e325042-5c54-411e-aa1a-cfb59d326416",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/mongodb.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/mongodb.png",
             "cloudinit": false,
             "code": {
                 "variables": {
