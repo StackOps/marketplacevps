@@ -826,6 +826,73 @@
             ]
         },
         {
+            "id": "12",
+            "name": "MongoDB",
+            "image-id": "5e325042-5c54-411e-aa1a-cfb59d326416",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/mongodb.jpg",
+            "cloudinit": false,
+            "code": {
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    },
+                    "APP_PASS": {
+                        "value": "mpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=mpass\nEOF"
+            },
+            "labels": {
+                "en": {
+                    "resume": "NoSql database system",
+                    "description": "MongoDB is a scalable, high-performance document-oriented NoSQL database system. Instead of storing data in tables as is done in a 'classical' relational database, MongoDB stores structured data as JSON-like documents with dynamic schemas, making integration with certain types of applications easier and faster.",
+                    "ROOT_PASS": "Root password",
+                    "APP_PASS": "MongoDB admin password",
+                    "ROOT_PASS_DESC": "Password to root user",
+                    "APP_PASS_DESC": "Password for MongoDB admin user",
+                    "creation_success": "Instance created!"
+                },
+                "es": {
+                    "resume": "Sistema de base de datos para NoSql",
+                    "description": "MongoDB es un sistema de base de datos escalable de alto rendimiento orientado a documentos NoSQL. En lugar de almacenar datos en tablas como se hace en una base de datos relacional 'clásica', MongoDB almacena datos estructurados como documentos JSON con esquemas dinámicos, por lo que la integración con ciertos tipos de aplicaciones es más fácil y más rápida.",
+                    "ROOT_PASS": "Contraseña de root",
+                    "APP_PASS": "Contraseña de admin de MongoDB",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "APP_PASS_DESC": "Contraseña de usuario admin de MongoDB",
+                    "creation_success": "Instancia creada correctamente!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "443",
+                    "12320",
+                    "12321",
+                    "27017",
+                    "27018",
+                    "27019",
+                    "28017"
+                ],
+                "udp": [
+                    "22"
+                ],
+                "icmp": [
+                    "-1"
+                ]
+            },
+            "flavors": [
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
             "id": "26",
             "name": "Centos 6.4",
             "image-id": "13e3a912-a0b6-4c6e-adeb-f05331a54e0a",
