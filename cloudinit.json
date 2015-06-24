@@ -893,6 +893,86 @@
             ]
         },
         {
+            "id": "13",
+            "name": "Bugzilla",
+            "image-id": "e5e06c2f-9ba0-48a0-8411-2c34dece8363",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/bugzilla.png",
+            "cloudinit": false,
+            "code": {
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    },
+                    "DB_PASS": {
+                        "value": "dbpass",
+                        "constraint": ""
+                    },
+                    "APP_PASS": {
+                        "value": "bpass",
+                        "constraint": ""
+                    },
+                    "APP_EMAIL": {
+                        "value": "email",
+                        "contraint": ""
+                    }
+                },
+                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=bpass\nexport APP_EMAIL=email\nEOF\nsed -i 's/cdn.debian.net/http.debian.net/' /etc/apt/sources.list.d/*"
+            },
+            "labels": {
+                "en": {
+                    "resume": "General-purpose bugtracker",
+                    "description": "Bugzilla is a Web-based general-purpose bugtracker and testing tool originally developed and used by the Mozilla project. One of Bugzilla's major attractions to developers is its lightweight implementation and speed. Many projects use it to track feature requests as well. Bugs can be submitted by anybody, and will be assigned to a particular developer.",
+                    "ROOT_PASS": "Root password",
+                    "DB_PASS": "Database root password",
+                    "APP_PASS": "Bugzilla admin password",
+                    "APP_EMAIL": "Bugzilla admin email",
+                    "ROOT_PASS_DESC": "Password to root user",
+                    "DB_PASS_DESC": "Password to the database root",
+                    "APP_PASS_DESC": "Password in Bugzilla for admin",
+                    "APP_EMAIL_DESC": "Contact email for admin",
+                    "creation_success": "Instance created!"
+                },
+                "es": {
+                    "resume": "Ligera herramienta de pruebas",
+                    "description": "Bugzilla es un bugtracker y herramienta de pruebas de propósito general basado en la web originalmente desarrollado y utilizado por el proyecto Mozilla. Una de las principales atracciones de Bugzilla para los desarrolladores es su ligera implementación y su velocidad. Muchos proyectos lo utilizan para el seguimiento de peticiones de características. Los errores pueden ser presentados por cualquier persona, y serán asignados a un desarrollador en particular.",
+                    "ROOT_PASS": "Contraseña de root",
+                    "DB_PASS": "Contraseña del root de la base de datos",
+                    "APP_PASS": "Contraseña de admin de Bugzilla",
+                    "APP_EMAIL": "Email de admin",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "DB_PASS_DESC": "Contraseña para el root de la base de datos",
+                    "APP_PASS_DESC": "Contraseña de usuario admin de Bugzilla",
+                    "APP_EMAIL_DESC": "Email de admin de Bugzilla",
+                    "creation_success": "Instancia creada correctamente!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "443",
+                    "12320",
+                    "12321"
+                ],
+                "udp": [
+                    "22"
+                ],
+                "icmp": [
+                    "-1"
+                ]
+            },
+            "flavors": [
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
             "id": "26",
             "name": "Centos 6.4",
             "image-id": "13e3a912-a0b6-4c6e-adeb-f05331a54e0a",
