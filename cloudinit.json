@@ -1137,7 +1137,7 @@
         {
             "id": "16",
             "name": "PunBB",
-            "image-id": "8bd2d13d-bc68-4793-9d31-bb359036c548",
+            "image-id": "00b76d85-2811-48af-acad-7ce5e767e48e",
             "organization": "StackOps Technologies S.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/punbb.png",
             "cloudinit": false,
