@@ -1481,6 +1481,50 @@
         {
             "id": "30",
             "name": "Debian 8",
+            "image-id": "1ca0ee93-3481-4da3-a2d1-8538683f0a07",
+            "organization": "StackOpsTechnologiesS.L.",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/debian-logo2.png",
+            "cloudinit": true,
+            "code": {
+                "variables": {},
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   debian:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+            },
+            "labels": {
+                "en": {
+                    "resume": "Free operating system",
+                    "description": "Debian is a free operating system that currently uses Linux kernels or FreeBSD. Debian comes with over 43,000 packages precompiled software for easy installation, a package manager (APT) and many other utilities to manage thousands of packages in thousands of computers so as easy as installing a single application. Debian 8 or Debian Jessie was released in April 2015.",
+                    "creation_success": "Instancecreated!"
+                },
+                "es": {
+                    "resume": "sistema operativo libre",
+                    "description": "Debian es un sistema operativo libre que actualmente utiliza núcleos de Linux o de FreeBSD. Debian viene con más de 43.000 paquetes de software precompilado para una instalación sencilla, un gestor de paquetes (APT) y muchas otras utilidades para gestionar miles de paquetes en miles de ordenadores de manera tan fácil como instalar una sola aplicación. Debian 8 o Debian Jessie fue lanzado en abril de 2015.",
+                    "creation_success": "Instancecreated!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "443"
+                ],
+                "udp": [],
+                "icmp": [
+                    "-1"
+                ]
+            },
+            "flavors": [
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
+            "id": "31",
+            "name": "Debian 8.1",
             "image-id": "8e6fc5fa-3e5c-4055-8bc2-a867c1e28cb9",
             "organization": "StackOpsTechnologiesS.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/debian-logo2.png",
