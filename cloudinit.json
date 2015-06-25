@@ -1523,7 +1523,7 @@
             ]
         },
         {
-            "id": "31",
+            "id": "32",
             "name": "Fedora 19",
             "image-id": "22c6bd09-290d-4fc2-ae6e-41a190d42f73",
             "organization": "StackOpsTechnologiesS.L.",
@@ -1567,7 +1567,7 @@
             ]
         },
         {
-            "id": "32",
+            "id": "33",
             "name": "Fedora 20",
             "image-id": "9e5220ce-1d87-4b57-aea6-b2bf85aaa665",
             "organization": "StackOpsTechnologiesS.L.",
@@ -1611,7 +1611,7 @@
             ]
         },
         {
-            "id": "33",
+            "id": "34",
             "name": "Fedora 21",
             "image-id": "daf5f9fd-a2de-4308-b9d4-8b99c8cf77bd",
             "organization": "StackOpsTechnologiesS.L.",
@@ -1655,7 +1655,51 @@
             ]
         },
         {
-            "id": "34",
+            "id": "35",
+            "name": "Fedora 22",
+            "image-id": "2a31ddc9-cfa4-4290-beff-f5fc97f67d70",
+            "organization": "StackOpsTechnologiesS.L.",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fedora-logo.png",
+            "cloudinit": true,
+            "code": {
+                "variables": {},
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/#PermitRootLogin/PermitRootLogin/' /etc/sshd_config\n- service sshd restart"
+            },
+            "labels": {
+                "en": {
+                    "resume": "Free operating system",
+                    "description": "Fedora is an operating system or a general purpose Linux distribution containing only free and open source software. Fedora is designed to be easy to install and configure. Fedora 22 was released in May 2015.",
+                    "creation_success": "Instancecreated!"
+                },
+                "es": {
+                    "resume": "sistema operativo libre",
+                    "description": "Fedora es un sistema operativo o distribución Linux de propósito general y que contiene exclusivamente software libre y de código abierto. Fedora está diseñado para ser fácil de instalar y configurar. Fedora 22 fue lanzado en mayo de 2015.",
+                    "creation_success": "Instancecreated!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "443"
+                ],
+                "udp": [],
+                "icmp": [
+                    "-1"
+                ]
+            },
+            "flavors": [
+                "19",
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
+            "id": "36",
             "name": "Ubuntu 12.04 LTS",
             "image-id": "4daa5361-5a16-44bc-8714-e990f169a826",
             "organization": "StackOpsTechnologiesS.L.",
@@ -1699,7 +1743,7 @@
             ]
         },
         {
-            "id": "35",
+            "id": "37",
             "name": "Ubuntu 13.04",
             "image-id": "c4d67783-10a9-428d-9e5e-1beb5ab05222",
             "organization": "StackOpsTechnologiesS.L.",
@@ -1743,7 +1787,7 @@
             ]
         },
         {
-            "id": "36",
+            "id": "38",
             "name": "Ubuntu 13.10",
             "image-id": "e210bfa5-99c1-4aed-b7a1-8468bdbbe2b7",
             "organization": "StackOpsTechnologiesS.L.",
@@ -1787,7 +1831,7 @@
             ]
         },
         {
-            "id": "37",
+            "id": "39",
             "name": "Ubuntu 14.04 LTS",
             "image-id": "44288012-b805-455f-a21f-74ab36c46362",
             "organization": "StackOpsTechnologiesS.L.",
@@ -1831,7 +1875,7 @@
             ]
         },
         {
-            "id": "38",
+            "id": "40",
             "name": "Ubuntu 14.10",
             "image-id": "4273e6d3-5944-457c-9396-d87946e763f6",
             "organization": "StackOpsTechnologiesS.L.",
@@ -1875,7 +1919,7 @@
             ]
         },
         {
-            "id": "39",
+            "id": "41",
             "name": "Ubuntu 15.04",
             "image-id": "f503445c-1649-49fb-a527-35f7441b85f9",
             "organization": "StackOpsTechnologiesS.L.",
