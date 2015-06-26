@@ -1329,8 +1329,8 @@
                     "creation_success": "Instance created!"
                 },
                 "es": {
-                    "resume": "Foro de discusión de código abierto",
-                    "description": "PhpBB es utilizado por millones de personas, por lo que es el foro de código abierto más utilizada en el mundo. PhpBB incorpora diseño modular de calidad profesional, interfaz de múltiples idiomas de alta seguridad y un extenso panel de administración, lo que permite la personalización de incluso las características más intrincadas.",
+                    "resume": "Entorno de ejecución multiplataforma",
+                    "description": "Node.js es un entorno de ejecución multiplataforma de código abierto para el lado del servidor y aplicaciones de red. Las aplicaciones Node.js están escritas en JavaScript y se pueden ejecutar en OS X, Microsoft Windows, Linux, FreeBSD, NonStop e IBM.",
                     "ROOT_PASS": "Contraseña de root",
                     "ROOT_PASS_DESC": "Contraseña para el usuario root",
                     "creation_success": "Instancia creada correctamente!"
