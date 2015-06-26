@@ -1305,6 +1305,62 @@
             ]
         },
         {
+            "id": "18",
+            "name": "Node.js",
+            "image-id": "d610251a-d9c4-42c7-98cf-af6a1f1a3cf7",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/nodejs.png",
+            "cloudinit": false,
+            "code": {
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nEOF"
+            },
+            "labels": {
+                "en": {
+                    "resume": "Cross-platform runtime environment",
+                    "description": "Node.js is an open source, cross-platform runtime environment for server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, Linux, FreeBSD, NonStop and IBM.",
+                    "ROOT_PASS": "Root password",
+                    "ROOT_PASS_DESC": "Password to root user",
+                    "creation_success": "Instance created!"
+                },
+                "es": {
+                    "resume": "Foro de discusión de código abierto",
+                    "description": "PhpBB es utilizado por millones de personas, por lo que es el foro de código abierto más utilizada en el mundo. PhpBB incorpora diseño modular de calidad profesional, interfaz de múltiples idiomas de alta seguridad y un extenso panel de administración, lo que permite la personalización de incluso las características más intrincadas.",
+                    "ROOT_PASS": "Contraseña de root",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "creation_success": "Instancia creada correctamente!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "443",
+                    "12320",
+                    "12321"
+                ],
+                "udp": [
+                    "22"
+                ],
+                "icmp": [
+                    "-1"
+                ]
+            },
+            "flavors": [
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
             "id": "26",
             "name": "Centos 6.4",
             "image-id": "13e3a912-a0b6-4c6e-adeb-f05331a54e0a",
