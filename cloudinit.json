@@ -1458,7 +1458,7 @@
                     "resume": "Herramienta de gestión de proyectos",
                     "description": "Trac es una herramienta para la gestión de proyectos y el seguimiento de errores escrita en Python. Es software libre y de código abierto.",
                     "ROOT_PASS": "Contraseña de root",
-                    "APP_PASS": "Contraseña de admin de Fileserver",
+                    "APP_PASS": "Contraseña de admin de Trac",
                     "ROOT_PASS_DESC": "Contraseña para el usuario root",
                     "APP_PASS_DESC": "Contraseña de usuario admin de Trac",
                     "creation_success": "Instancia creada correctamente!"
