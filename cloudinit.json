@@ -1429,7 +1429,7 @@
             "name": "Trac",
             "image-id": "3ddfc4d9-4ae1-41a8-b25f-452b3d274fbb",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/trac.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/trac.png",
             "cloudinit": false,
             "code": {
                 "variables": {
