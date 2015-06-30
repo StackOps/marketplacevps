@@ -1514,18 +1514,18 @@
                     "resume": "Open source web platform",
                     "description": "The LAPP stack is an open source web platform that can be used to run dynamic web sites and servers. It is considered by many to be a powerful alternative to LAMP stack and includes Linux, Apache, PostgreSQL (instead of MySQL) and PHP, Python and Perl.",
                     "ROOT_PASS": "Root password",
-                    "DB_PASS": "postgres password",
+                    "DB_PASS": "postgres user password",
                     "ROOT_PASS_DESC": "Root user password",
-                    "DB_PASS_DESC": "postgres user password",
+                    "DB_PASS_DESC": "postgres user password to access database",
                     "creation_success": "Instance created!"
                 },
                 "es": {
                     "resume": "Plataforma web de código abierto",
                     "description": "LAPP es una plataforma web de código abierto que se puede utilizar para ejecutar sitios web dinámicos y servidores. Es considerado por muchos como una poderosa alternativa a LAMP, e incluye Linux, Apache, PostgreSQL (en lugar de MySQL) y PHP, Python y Perl.",
                     "ROOT_PASS": "Contraseña de root",
-                    "DB_PASS": "Contraseña de root de PostgreSQL",
+                    "DB_PASS": "Contraseña de usuario postgres",
                     "ROOT_PASS_DESC": "Contraseña para el usuario root",
-                    "DB_PASS_DESC": "Contraseña de usuario postgres",
+                    "DB_PASS_DESC": "Contraseña de usuario postgres para usar la Base de Datos",
                     "creation_success": "Instancia creada correctamente!"
                 }
             },
