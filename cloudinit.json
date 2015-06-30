@@ -26,8 +26,8 @@
                     "description": "LAMP stack is a popular open source web platform commonly used to run dynamic web sites and servers. It includes Linux, Apache, MySQL, and PHP/Python/Perl and is considered by many the platform of choice for development and deployment of high performance web applications which require a solid and reliable foundation.",
                     "ROOT_PASS": "Root password",
                     "DB_PASS": "Database password",
-                    "ROOT_PASS_DESC": "Password of the root used",
-                    "DB_PASS_DESC": "Password of the database root",
+                    "ROOT_PASS_DESC": "Password for root user",
+                    "DB_PASS_DESC": "Password of database root",
                     "creation_success": "Instance created!"
                 },
                 "es": {
@@ -100,10 +100,10 @@
                     "DB_PASS": "Database root password",
                     "APP_PASS": "Wordpress admin password",
                     "APP_EMAIL": "Wordpress admin email",
-                    "ROOT_PASS_DESC": "Password to root user",
-                    "DB_PASS_DESC": "Password to the database root",
-                    "APP_PASS_DESC": "Password used in the app for admin",
-                    "APP_EMAIL_DESC": "Contact email for admin",
+                    "ROOT_PASS_DESC": "Password for root user",
+                    "DB_PASS_DESC": "Password for database root",
+                    "APP_PASS_DESC": "Password used in the app by admin",
+                    "APP_EMAIL_DESC": "Admin contact email",
                     "creation_success": "Instance created!"
                 },
                 "es": {
@@ -170,8 +170,8 @@
                     "description": "An easy to use file server that combines Windows-compatible network file sharing, with an advanced web based file manager. Includes support for SMB, SFTP and rsync file transfer protocols. The server is configured to allow server users to manage files in private or public storage. Based on Samba and AjaXplorer. ",
                     "ROOT_PASS": "Root password",
                     "APP_PASS": "Fileserver admin password",
-                    "ROOT_PASS_DESC": "Password to root user",
-                    "APP_PASS_DESC": "Password used in the app for admin in local",
+                    "ROOT_PASS_DESC": "Password for root user",
+                    "APP_PASS_DESC": "Admin password for app local access",
                     "creation_success": "Instance created!"
                 },
                 "es": {
@@ -180,7 +180,7 @@
                     "ROOT_PASS": "Contraseña de root",
                     "APP_PASS": "Contraseña de admin de Fileserver",
                     "ROOT_PASS_DESC": "Contraseña para el usuario root",
-                    "APP_PASS_DESC": "Contraseña de usuario admin local",
+                    "APP_PASS_DESC": "Contraseña de usuario admin para acceso local",
                     "creation_success": "Instancia creada correctamente!"
                 }
             },
@@ -322,7 +322,7 @@
                     "APP_DOMAIN": "Samba domain",
                     "ROOT_PASS_DESC": "Root user password",
                     "APP_PASS_DESC": "Ajaxplorer and Samba admin/administrator user password ",
-                    "APP_DOMAIN_DESC": "Domain to use",
+                    "APP_DOMAIN_DESC": "Domain to access",
                     "creation_success": "Instance created!"
                 },
                 "es": {
@@ -333,7 +333,7 @@
                     "APP_DOMAIN": "Dominio",
                     "ROOT_PASS_DESC": "Contraseña para el usuario root",
                     "APP_PASS_DESC": "Contraseña del admin para Ajaxplorer y Samba",
-                    "APP_EMAIL_DESC": "Dominio a utilizar",
+                    "APP_EMAIL_DESC": "Dominio de acceso",
                     "creation_success": "Instancia creada correctamente!"
                 }
             },
@@ -851,7 +851,7 @@
                     "description": "MongoDB is a scalable, high-performance document-oriented NoSQL database system. Instead of storing data in tables as is done in a 'classical' relational database, MongoDB stores structured data as JSON-like documents with dynamic schemas, making integration with certain types of applications easier and faster.",
                     "ROOT_PASS": "Root password",
                     "APP_PASS": "MongoDB admin password",
-                    "ROOT_PASS_DESC": "Password to root user",
+                    "ROOT_PASS_DESC": "Root user password",
                     "APP_PASS_DESC": "Password for MongoDB admin user",
                     "creation_success": "Instance created!"
                 },
@@ -928,10 +928,10 @@
                     "DB_PASS": "Database root password",
                     "APP_PASS": "Bugzilla admin password",
                     "APP_EMAIL": "Bugzilla admin email",
-                    "ROOT_PASS_DESC": "Password to root user",
-                    "DB_PASS_DESC": "Password to the database root",
-                    "APP_PASS_DESC": "Password in Bugzilla for admin",
-                    "APP_EMAIL_DESC": "Contact email for admin",
+                    "ROOT_PASS_DESC": "Root user password ",
+                    "DB_PASS_DESC": "Database root password",
+                    "APP_PASS_DESC": "Bugzilla admin password",
+                    "APP_EMAIL_DESC": "Admin user email",
                     "creation_success": "Instance created!"
                 },
                 "es": {
@@ -1259,10 +1259,10 @@
                     "DB_PASS": "Database root password",
                     "APP_PASS": "phpBB admin password",
                     "APP_EMAIL": "phpBB admin email",
-                    "ROOT_PASS_DESC": "Password to root user",
-                    "DB_PASS_DESC": "Password to the database root",
-                    "APP_PASS_DESC": "Password used in phpBB for admin",
-                    "APP_EMAIL_DESC": "Contact email for phpBB admin",
+                    "ROOT_PASS_DESC": "Root user password",
+                    "DB_PASS_DESC": "Database root password",
+                    "APP_PASS_DESC": "Admin user password for phpBB",
+                    "APP_EMAIL_DESC": "phpBB admin email",
                     "creation_success": "Instance created!"
                 },
                 "es": {
@@ -1325,7 +1325,7 @@
                     "resume": "Cross-platform runtime environment",
                     "description": "Node.js is an open source, cross-platform runtime environment for server-side and networking applications. Node.js applications are written in JavaScript, and can be run within the Node.js runtime on OS X, Microsoft Windows, Linux, FreeBSD, NonStop and IBM.",
                     "ROOT_PASS": "Root password",
-                    "ROOT_PASS_DESC": "Password to root user",
+                    "ROOT_PASS_DESC": "Root user pass",
                     "creation_success": "Instance created!"
                 },
                 "es": {
@@ -1386,8 +1386,8 @@
                     "description": "Ruby on Rails is an open-source web framework that's optimized for sustainable productivity. Written in Ruby, Rails allows you to transition from idea to implementation in a very short period of time.",
                     "ROOT_PASS": "Root password",
                     "DB_PASS": "Database password",
-                    "ROOT_PASS_DESC": "Password of the root used",
-                    "DB_PASS_DESC": "Password of the database root",
+                    "ROOT_PASS_DESC": "Root user password",
+                    "DB_PASS_DESC": "Database root password",
                     "creation_success": "Instance created!"
                 },
                 "es": {
@@ -1407,6 +1407,71 @@
                     "443",
                     "12320",
                     "12321"
+                ],
+                "udp": [
+                    "22"
+                ],
+                "icmp": [
+                    "-1"
+                ]
+            },
+            "flavors": [
+                "20",
+                "21",
+                "22",
+                "23",
+                "24",
+                "25"
+            ]
+        },
+        {
+            "id": "20",
+            "name": "Trac",
+            "image-id": "3ddfc4d9-4ae1-41a8-b25f-452b3d274fbb",
+            "organization": "StackOps Technologies S.L.",
+            "icon": "http://www.turnkeylinux.org/files/images/icons/trac.jpg",
+            "cloudinit": false,
+            "code": {
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    },
+                    "APP_PASS": {
+                        "value": "trpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=trpass\nEOF"
+            },
+            "labels": {
+                "en": {
+                    "resume": "Project management and bug tracking",
+                    "description": "Trac is a tool for project management and bug tracking written in Python. It is free and open source software.",
+                    "ROOT_PASS": "Root password",
+                    "APP_PASS": "Fileserver admin password",
+                    "ROOT_PASS_DESC": "Root user password",
+                    "APP_PASS_DESC": "Trac admin user password",
+                    "creation_success": "Instance created!"
+                },
+                "es": {
+                    "resume": "Herramienta de gestión de proyectos",
+                    "description": "Trac es una herramienta para la gestión de proyectos y el seguimiento de errores escrita en Python. Es software libre y de código abierto.",
+                    "ROOT_PASS": "Contraseña de root",
+                    "APP_PASS": "Contraseña de admin de Fileserver",
+                    "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "APP_PASS_DESC": "Contraseña de usuario admin de Trac",
+                    "creation_success": "Instancia creada correctamente!"
+                }
+            },
+            "ports": {
+                "tcp": [
+                    "22",
+                    "80",
+                    "443",
+                    "12320",
+                    "12321",
+                    "12322"
                 ],
                 "udp": [
                     "22"
