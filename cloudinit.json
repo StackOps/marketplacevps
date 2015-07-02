@@ -1789,6 +1789,7 @@
                 "es": {
                     "resume": "Supervisión de trabajos repetidos",
                     "description": "Jenkins es una aplicación premiada que supervisa ejecuciones de trabajos repetidos, tales como la construcción de un proyecto de software o de puestos de trabajo a cargo de cron. Entre esas cosas, el actual Jenkins se centra en proyectos de software de construcción/prueba de forma continua y las ejecuciones de supervisión de trabajos dirigidos externamente.",
+                    "ROOT_PASS": "Contraseña de root",
                     "APP_PASS": "Contraseña de admin",
                     "ROOT_PASS_DESC": "Contraseña para el usuario root",
                     "APP_PASS_DESC": "Contraseña de usuario admin de Jenkins",
