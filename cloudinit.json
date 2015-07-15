@@ -153,7 +153,7 @@
             "name": "File Server",
             "image-id": "173f9c14-3a6b-45af-acdc-5fabd8e48786",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/fileserver.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fileserver.jpg",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -300,7 +300,7 @@
             "name": "Domain Controller",
             "image-id": "3bb8ef13-77a4-4f21-8e81-1888f7faf978",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/domain-controller.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/domain-controller.jpg",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -1500,7 +1500,7 @@
             "name": "LAPP",
             "image-id": "23949495-465f-43c0-89a0-1e79854225d3",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://www.turnkeylinux.org/files/images/icons/lapp.jpg",
+            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/lapp.jpg",
             "cloudinit": false,
             "code": {
                 "variables": {
