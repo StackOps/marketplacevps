@@ -166,7 +166,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=ajapass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=ajapass\nEOF"
             },
             "labels": {
                 "en": {
