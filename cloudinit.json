@@ -18,7 +18,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nEOF"
             },
             "labels": {
                 "en": {
@@ -92,7 +92,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=wpass\nexport APP_EMAIL=email\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=wpass\nexport APP_EMAIL=email\nEOF"
             },
             "labels": {
                 "en": {
@@ -239,7 +239,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=rmpass\nexport APP_EMAIL=email\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=rmpass\nexport APP_EMAIL=email\nEOF"
             },
             "labels": {
                 "en": {
@@ -317,7 +317,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=dcpass\nexport APP_DOMAIN=domain\nEOF"
+                "content": "#!/bin/bash -e\\nresize2fs /dev/vdancat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=dcpass\nexport APP_DOMAIN=domain\nEOF"
             },
             "labels": {
                 "en": {
@@ -396,7 +396,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=dpass\nexport APP_EMAIL=email\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=dpass\nexport APP_EMAIL=email\nEOF"
             },
             "labels": {
                 "en": {
@@ -473,7 +473,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=ocpass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=ocpass\nEOF"
             },
             "labels": {
                 "en": {
@@ -542,7 +542,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nEOF"
             },
             "labels": {
                 "en": {
@@ -618,7 +618,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=dpass\nexport APP_EMAIL=email\nexport APP_DOMAIN=domain\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=dpass\nexport APP_EMAIL=email\nexport APP_DOMAIN=domain\nEOF"
             },
             "labels": {
                 "en": {
@@ -703,7 +703,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=jpass\nexport APP_EMAIL=email\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=jpass\nexport APP_EMAIL=email\nEOF"
             },
             "labels": {
                 "en": {
@@ -780,7 +780,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=mpass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=mpass\nEOF"
             },
             "labels": {
                 "en": {
@@ -849,7 +849,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=mpass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=mpass\nEOF"
             },
             "labels": {
                 "en": {
@@ -924,7 +924,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=bpass\nexport APP_EMAIL=email\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=bpass\nexport APP_EMAIL=email\nEOF"
             },
             "labels": {
                 "en": {
@@ -1008,7 +1008,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=mapass\nexport APP_EMAIL=email\nexport APP_DOMAIN=domain\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=mapass\nexport APP_EMAIL=email\nexport APP_DOMAIN=domain\nEOF"
             },
             "labels": {
                 "en": {
@@ -1089,7 +1089,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=supass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=supass\nEOF"
             },
             "labels": {
                 "en": {
@@ -1170,7 +1170,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=pupass\nexport APP_EMAIL=email\nexport APP_DOMAIN=domain\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=pupass\nexport APP_EMAIL=email\nexport APP_DOMAIN=domain\nEOF"
             },
             "labels": {
                 "en": {
@@ -1255,7 +1255,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=phpass\nexport APP_EMAIL=email\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=phpass\nexport APP_EMAIL=email\nEOF"
             },
             "labels": {
                 "en": {
@@ -1324,7 +1324,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nEOF"
             },
             "labels": {
                 "en": {
@@ -1384,7 +1384,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nEOF"
             },
             "labels": {
                 "en": {
@@ -1448,7 +1448,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=trpass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=trpass\nEOF"
             },
             "labels": {
                 "en": {
@@ -1513,7 +1513,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=lapass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=lapass\nEOF"
             },
             "labels": {
                 "en": {
@@ -1582,7 +1582,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=topass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=dbpass\nexport APP_PASS=topass\nEOF"
             },
             "labels": {
                 "en": {
@@ -1651,7 +1651,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=copass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=copass\nEOF"
             },
             "labels": {
                 "en": {
@@ -1715,7 +1715,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=popass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport DB_PASS=popass\nEOF"
             },
             "labels": {
                 "en": {
@@ -1780,7 +1780,7 @@
                         "constraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=jepass\nEOF"
+                "content": "#!/bin/bash -e\nresize2fs /dev/vda\ncat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=jepass\nEOF"
             },
             "labels": {
                 "en": {
