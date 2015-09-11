@@ -2360,19 +2360,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/ubuntu-logo2.png",
             "cloudinit": false,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   ubuntu:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   ubuntu:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Operating system based on GNU/Linux",
                     "description": "Ubuntu is an operating system based on GNU/Linux. It is distributed as free software and includes its own desktop environment.\nUbuntu has everything you need for your organization, school, home or business. All the essential applications, such as an office suite, browser, e-mail and media applications are preinstalled and thousands of games and applications are available in the Ubuntu Software Center.\nUbuntu 13.10 (code name Saucy Salamander), was released in October 2013.",
-                    "creation_success": "Instance created!"
+                    "creation_success": "Instance created successfully. Use the 'ubuntu' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter ubuntu password"
                 },
                 "es": {
                     "resume": "Sistema operativo basado en GNU/Linux",
                     "description": "Ubuntu es un sistema operativo basado en GNU/Linux. Se distribuye como software libre e incluye su propio entorno de escritorio.\nUbuntu tiene todo lo que necesita para su organización, escuela, hogar o empresa. Todas las aplicaciones esenciales, como una suite ofimática, navegadores, correo electrónico y aplicaciones de medios de comunicación vienen preinstalados y miles de juegos y aplicaciones están disponibles en el centro de software de Ubuntu.\nUbuntu 13.10 (nombre clave Saucy Salamander), fue lanzado en octubre de 2013.",
-                    "creation_success": "¡Instancia creada!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'ubuntu'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario ubuntu"
                 }
             },
             "ports": {
@@ -2517,19 +2530,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/ubuntu-logo2.png",
             "cloudinit": false,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   ubuntu:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   ubuntu:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Operating system based on GNU/Linux",
                     "description": "Ubuntu is an operating system based on GNU/Linux. It is distributed as free software and includes its own desktop environment.\nUbuntu has everything you need for your organization, school, home or business. All the essential applications, such as an office suite, browser, e-mail and media applications are preinstalled and thousands of games and applications are available in the Ubuntu Software Center.\nUbuntu 15.04 (code name Vivid Vervet) was released in April 2015.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'ubuntu' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter ubuntu password"
                 },
                 "es": {
                     "resume": "Sistema operativo basado en GNU/Linux",
                     "description": "Ubuntu es un sistema operativo basado en GNU/Linux. Se distribuye como software libre e incluye su propio entorno de escritorio.\nUbuntu tiene todo lo que necesita para su organización, escuela, hogar o empresa. Todas las aplicaciones esenciales, como una suite ofimática, navegadores, correo electrónico y aplicaciones de medios de comunicación vienen preinstalados y miles de juegos y aplicaciones están disponibles en el centro de software de Ubuntu.\nUbuntu 15.04 (nombre clave Vivid Vervet) fue lanzado en abril de 2015.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'ubuntu'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario ubuntu"                }
                 }
             },
             "ports": {
