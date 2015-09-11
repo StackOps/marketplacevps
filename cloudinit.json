@@ -2555,7 +2555,7 @@
                     "description": "Ubuntu es un sistema operativo basado en GNU/Linux. Se distribuye como software libre e incluye su propio entorno de escritorio.\nUbuntu tiene todo lo que necesita para su organización, escuela, hogar o empresa. Todas las aplicaciones esenciales, como una suite ofimática, navegadores, correo electrónico y aplicaciones de medios de comunicación vienen preinstalados y miles de juegos y aplicaciones están disponibles en el centro de software de Ubuntu.\nUbuntu 15.04 (nombre clave Vivid Vervet) fue lanzado en abril de 2015.",
                     "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'ubuntu'.",
                     "ROOT_PASS": "Password de root",
-                    "USER_PASS": "Password usuario ubuntu"                }
+                    "USER_PASS": "Password usuario ubuntu"
                 }
             },
             "ports": {
