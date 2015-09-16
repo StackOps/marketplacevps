@@ -2052,19 +2052,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/debian-logo2.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   debian:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   debian:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Free operating system",
                     "description": "Debian is a free operating system that currently uses Linux kernels or FreeBSD. Debian comes with over 43,000 packages precompiled software for easy installation, a package manager (APT) and many other utilities to manage thousands of packages in thousands of computers so as easy as installing a single application. Debian 8 or Debian Jessie was released in April 2015.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'debian' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter ubuntu password"
                 },
                 "es": {
                     "resume": "sistema operativo libre",
                     "description": "Debian es un sistema operativo libre que actualmente utiliza núcleos de Linux o de FreeBSD. Debian viene con más de 43.000 paquetes de software precompilado para una instalación sencilla, un gestor de paquetes (APT) y muchas otras utilidades para gestionar miles de paquetes en miles de ordenadores de manera tan fácil como instalar una sola aplicación. Debian 8 o Debian Jessie fue lanzado en abril de 2015.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'debian'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario ubuntu"
                 }
             },
             "ports": {
