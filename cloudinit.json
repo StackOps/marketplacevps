@@ -1834,19 +1834,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/centos-logo2.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   cloud-user:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   cloud-user:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Linux distribution based on RHEL",
                     "description": "CentOS is a Linux distribution based on Red Hat Enterprise Linux (RHEL). It is an open source operating system that has positioned itself as the distribution of choice for enterprise-class servers to be a stable, predictable and manageable platform, with very competitive costs. Centos 6.4 was released in March 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'cloud-user' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter cloud-user password"
                 },
                 "es": {
                     "resume": "Distribución de Linux basada en RHEL",
                     "description": "CentOS es una distribución de Linux basada en Red Hat Enterprise Linux (RHEL). Es un sistema operativo de código abierto que se ha posicionado como la distribución por excelencia para servidores de clase empresarial por ser una plataforma estable, predecible y manejable, con unos costes muy competitivos. Centos 6.4 fue lanzado en marzo de 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'cloud-user'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario cloud-user"
                 }
             },
             "ports": {
@@ -1877,19 +1890,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/centos-logo2.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   cloud-user:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   cloud-user:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Linux distribution based on RHEL",
                     "description": "CentOS is a Linux distribution based on Red Hat Enterprise Linux (RHEL). It is an open source operating system that has positioned itself as the distribution of choice for enterprise-class servers to be a stable, predictable and manageable platform, with very competitive costs. Centos 6.5 was released in December 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'cloud-user' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter cloud-user password"
                 },
                 "es": {
                     "resume": "Distribución de Linux basada en RHEL",
                     "description": "CentOS es una distribución de Linux basada en Red Hat Enterprise Linux (RHEL). Es un sistema operativo de código abierto que se ha posicionado como la distribución por excelencia para servidores de clase empresarial por ser una plataforma estable, predecible y manejable, con unos costes muy competitivos. Centos 6.5 fue lanzado en diciembre de 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'cloud-user'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario cloud-user"
                 }
             },
             "ports": {
@@ -1920,19 +1946,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/centos-logo2.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   centos:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   centos:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Linux distribution based on RHEL",
                     "description": "CentOS is a Linux distribution based on Red Hat Enterprise Linux (RHEL). It is an open source operating system that has positioned itself as the distribution of choice for enterprise-class servers to be a stable, predictable and manageable platform, with very competitive costs. Centos 7 was released in July 2014.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'centos' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter centos password"
                 },
                 "es": {
                     "resume": "Distribución de Linux basada en RHEL",
                     "description": "CentOS es una distribución de Linux basada en Red Hat Enterprise Linux (RHEL). Es un sistema operativo de código abierto que se ha posicionado como la distribución por excelencia para servidores de clase empresarial por ser una plataforma estable, predecible y manejable, con unos costes muy competitivos. Centos 7 fue lanzado en julio de 2014.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'centos'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario centos"
                 }
             },
             "ports": {
@@ -1964,19 +2003,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/debian-logo2.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   debian:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   debian:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Free operating system",
                     "description": "Debian is a free operating system that currently uses Linux kernels or FreeBSD. Debian comes with over 43,000 packages precompiled software for easy installation, a package manager (APT) and many other utilities to manage thousands of packages in thousands of computers so as easy as installing a single application. Debian 7 or Debian Wheezy was released in May 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'debian' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter debian password"
                 },
                 "es": {
                     "resume": "sistema operativo libre",
                     "description": "Debian es un sistema operativo libre que actualmente utiliza núcleos de Linux o de FreeBSD. Debian viene con más de 43.000 paquetes de software precompilado para una instalación sencilla, un gestor de paquetes (APT) y muchas otras utilidades para gestionar miles de paquetes en miles de ordenadores de manera tan fácil como instalar una sola aplicación. Debian 7 o Debian Wheezy fue lanzado en mayo de 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'debian'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario debian"
                 }
             },
             "ports": {
@@ -2008,19 +2060,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/debian-logo2.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   debian:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   debian:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Free operating system",
                     "description": "Debian is a free operating system that currently uses Linux kernels or FreeBSD. Debian comes with over 43,000 packages precompiled software for easy installation, a package manager (APT) and many other utilities to manage thousands of packages in thousands of computers so as easy as installing a single application. Debian 8 or Debian Jessie was released in April 2015.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'debian' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter debian password"
                 },
                 "es": {
-                    "resume": "sistema operativo libre",
+                    "resume": "Sistema operativo libre",
                     "description": "Debian es un sistema operativo libre que actualmente utiliza núcleos de Linux o de FreeBSD. Debian viene con más de 43.000 paquetes de software precompilado para una instalación sencilla, un gestor de paquetes (APT) y muchas otras utilidades para gestionar miles de paquetes en miles de ordenadores de manera tan fácil como instalar una sola aplicación. Debian 8 o Debian Jessie fue lanzado en abril de 2015.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'debian'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario debian"
                 }
             },
             "ports": {
@@ -2070,14 +2135,14 @@
                     "description": "Debian is a free operating system that currently uses Linux kernels or FreeBSD. Debian comes with over 43,000 packages precompiled software for easy installation, a package manager (APT) and many other utilities to manage thousands of packages in thousands of computers so as easy as installing a single application. Debian 8 or Debian Jessie was released in April 2015.",
                     "creation_success": "Instance created successfully. Use the 'debian' user to log in.",
                     "ROOT_PASS": "Enter root password",
-                    "USER_PASS": "Enter ubuntu password"
+                    "USER_PASS": "Enter debian password"
                 },
                 "es": {
-                    "resume": "sistema operativo libre",
+                    "resume": "Sistema operativo libre",
                     "description": "Debian es un sistema operativo libre que actualmente utiliza núcleos de Linux o de FreeBSD. Debian viene con más de 43.000 paquetes de software precompilado para una instalación sencilla, un gestor de paquetes (APT) y muchas otras utilidades para gestionar miles de paquetes en miles de ordenadores de manera tan fácil como instalar una sola aplicación. Debian 8 o Debian Jessie fue lanzado en abril de 2015.",
                     "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'debian'.",
                     "ROOT_PASS": "Password de root",
-                    "USER_PASS": "Password usuario ubuntu"
+                    "USER_PASS": "Password usuario debian"
                 }
             },
             "ports": {
@@ -2109,19 +2174,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fedora-logo.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/#PermitRootLogin/PermitRootLogin/' /etc/sshd_config\n- service sshd restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   fedora:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Free operating system",
                     "description": "Fedora is an operating system or a general purpose Linux distribution containing only free and open source software. Fedora is designed to be easy to install and configure. Fedora 19 or Schrödinger's Cat was released in July 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'fedora' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter fedora password"
                 },
                 "es": {
                     "resume": "sistema operativo libre",
                     "description": "Fedora es un sistema operativo o distribución Linux de propósito general y que contiene exclusivamente software libre y de código abierto. Fedora está diseñado para ser fácil de instalar y configurar. Fedora 19 o Schrödinger's Cat fue lanzado en julio de 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'fedora'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario fedora"
                 }
             },
             "ports": {
@@ -2153,19 +2231,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fedora-logo.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   fedora:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Free operating system",
                     "description": "Fedora is an operating system or a general purpose Linux distribution containing only free and open source software. Fedora is designed to be easy to install and configure. Fedora 20 or Heisenbug was released in December 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'fedora' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter fedora password"
                 },
                 "es": {
                     "resume": "sistema operativo libre",
                     "description": "Fedora es un sistema operativo o distribución Linux de propósito general y que contiene exclusivamente software libre y de código abierto. Fedora está diseñado para ser fácil de instalar y configurar. Fedora 20 o Heisenbug fue lanzado en diciembre de 2013.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'fedora'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario fedora"
                 }
             },
             "ports": {
@@ -2197,19 +2288,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fedora-logo.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- /etc/init.d/sshd restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   fedora:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Free operating system",
                     "description": "Fedora is an operating system or a general purpose Linux distribution containing only free and open source software. Fedora is designed to be easy to install and configure. Fedora 21 was released in October 2014.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'fedora' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter fedora password"
                 },
                 "es": {
                     "resume": "sistema operativo libre",
                     "description": "Fedora es un sistema operativo o distribución Linux de propósito general y que contiene exclusivamente software libre y de código abierto. Fedora está diseñado para ser fácil de instalar y configurar. Fedora 21 fue lanzado en octubre de 2014.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'fedora'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario fedora"
                 }
             },
             "ports": {
@@ -2241,19 +2345,32 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/fedora-logo.png",
             "cloudinit": true,
             "code": {
-                "variables": {},
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:stackops\n   fedora:stackops\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/#PermitRootLogin/PermitRootLogin/' /etc/sshd_config\n- service sshd restart"
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   fedora:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
             },
             "labels": {
                 "en": {
                     "resume": "Free operating system",
                     "description": "Fedora is an operating system or a general purpose Linux distribution containing only free and open source software. Fedora is designed to be easy to install and configure. Fedora 22 was released in May 2015.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instance created successfully. Use the 'fedora' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter fedora password"
                 },
                 "es": {
                     "resume": "sistema operativo libre",
                     "description": "Fedora es un sistema operativo o distribución Linux de propósito general y que contiene exclusivamente software libre y de código abierto. Fedora está diseñado para ser fácil de instalar y configurar. Fedora 22 fue lanzado en mayo de 2015.",
-                    "creation_success": "Instancecreated!"
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'fedora'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario fedora"
                 }
             },
             "ports": {
