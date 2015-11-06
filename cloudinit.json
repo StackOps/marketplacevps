@@ -2744,12 +2744,7 @@
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/Windows-Server2012R2.jpg",
             "cloudinit": false,
             "code": {
-                "variables": {
-                    "ROOT_PASS": {
-                        "value": "",
-                        "constraint": ""
-                    }
-                },
+                "variables": "",
                 "content": ""
             },
             "labels": {
