@@ -2743,16 +2743,33 @@
             "organization": "StackOpsTechnologiesS.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/Windows-Server2012R2.jpg",
             "cloudinit": false,
+            "code": {
+                "variables": {
+                    "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
+                        "value": "userpass",
+                        "constraint": ""
+                    }
+                },
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   ubuntu:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart"
+            },
             "labels": {
                 "en": {
                     "resume": "Windows 2012 R2",
                     "description": "At the heart of the Microsoft Cloud Platform vision, Windows Server 2012 R2 brings Microsoft’s experience delivering global-scale cloud services into your infrastructure with new features and enhancements in virtualization, management, storage, networking, virtual desktop infrastructure, access and information protection, the web and application platform, and more.",
-                    "creation_success": "Instance created successfully. Use the 'ubuntu' user to log in.""
+                    "creation_success": "Instance created successfully. Use the 'ubuntu' user to log in.",
+                    "ROOT_PASS": "Enter root password",
+                    "USER_PASS": "Enter ubuntu password"
                 },
                 "es": {
                     "resume": "Windows 2012 R2",
                     "description": "Como eje central de la visión de Microsoft Cloud Platform, Windows Server 2012 R2 combina la experiencia de Microsoft en la prestación de servicios en la nube a escala global en una infraestructura junto con las nuevas características y mejoras en la virtualización, la administración, el almacenamiento, las redes, la infraestructura del escritorio virtual (VDI), la protección de la información y del acceso o la plataforma de aplicaciones y web, entre otras.",
-                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'ubuntu'."
+                    "creation_success": "Instancia creada con éxito. Para entrar, use el usuario 'ubuntu'.",
+                    "ROOT_PASS": "Password de root",
+                    "USER_PASS": "Password usuario ubuntu"
                 }
             },
             "ports": {
