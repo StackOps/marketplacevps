@@ -2794,6 +2794,10 @@
             "code": {
                 "variables": {
                     "ROOT_PASS": {
+                        "value": "rootpass",
+                        "constraint": ""
+                    },
+                    "USER_PASS": {
                         "value": "userpass",
                         "constraint": ""
                     },
@@ -2802,15 +2806,17 @@
                         "contraint": ""
                     }
                 },
-                "content": "#!/bin/bash -e\nexport ROOT_PASS=userpass\nexport APP_DOMAIN=domain\nexport MY_IP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'`\nif [[ ! \"$APP_DOMAIN \" == \"\" ]];then\necho \"$HOSTNAME.$APP_DOMAIN \" >> /etc/hostname\nsed -i \"s / 212.231.*/$MY_IP $HOSTNAME $HOSTNAME.$APP_DOMAIN/\" /etc/hosts\nelse\nsed -i \"s / 212.231.*/$MY_IP $HOSTNAME\" /etc / hosts\nfi\necho - e \"$ROOT_PASS\n$ROOT_PASS\" | (passwd root)\nreboot "
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   ubuntu:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart\n- export APP_DOMAIN=cirrusflex.com\n- export MY_IP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'`\n- export HOSTNAME=`hostname`\n- echo \"$HOSTNAME.$APP_DOMAIN\" > /etc/hostname\n- sed -i \"s/212.231.*/$MY_IP $HOSTNAME $HOSTNAME.$APP_DOMAIN/\" /etc/hosts\n- reboot"
             },
             "labels": {
                 "en": {
                     "resume": "Ubuntu + Plesk ",
                     "description": "Ubuntu + Plesk ",
                     "ROOT_PASS": "Root password",
+                    "USER_PASS": "ubuntu password",
                     "APP_DOMAIN": "Plesk domain",
                     "ROOT_PASS_DESC": "Root user password",
+                    "USER_PASS_DESC": "ubuntu user password",
                     "APP_DOMAIN_DESC": "Domain to access",
                     "creation_success": "Instance created!"
                 },
@@ -2818,8 +2824,10 @@
                     "resume": "Ubuntu + Plesk",
                     "description": "Ubuntu + Plesk ",
                     "ROOT_PASS": "Contraseña root",
+                    "USER_PASS": "Contraseña ubuntu",
                     "APP_DOMAIN": "Dominio de Plesk",
                     "ROOT_PASS_DESC": "Contraseña para el usuario root",
+                    "USER_PASS_DESC": "Contraseña para el usuario ubuntu",
                     "APP_EMAIL_DESC": "Dominio de acceso",
                     "creation_success": "Instancia creada correctamente!"
                 }
