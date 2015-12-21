@@ -2789,7 +2789,7 @@
             "name": "Ubuntu 14.04 + Plesk 12.5",
             "image-id": "8f7bfbac-b484-476a-8ff8-81131e03d8b2",
             "organization": "StackOps Technologies S.L.",
-            "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/domain-controller.jpg",
+            "icon": "https://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/plesk12.jpg",
             "cloudinit": false,
             "code": {
                 "variables": {
@@ -2810,8 +2810,8 @@
             },
             "labels": {
                 "en": {
-                    "resume": "Ubuntu + Plesk ",
-                    "description": "Ubuntu + Plesk ",
+                    "resume": "Web hosting automation program",
+                    "description": "Plesk is a web hosting automation program. It allows a server administrator to set up new websites, reseller accounts, e-mail accounts, and DNS entries through a web-based interface.",
                     "ROOT_PASS": "Root password",
                     "USER_PASS": "ubuntu password",
                     "APP_DOMAIN": "Plesk domain",
@@ -2821,8 +2821,8 @@
                     "creation_success": "Instance created!"
                 },
                 "es": {
-                    "resume": "Ubuntu + Plesk",
-                    "description": "Ubuntu + Plesk ",
+                    "resume": "Automatización de alojamiento web",
+                    "description": "Plesk es un programa de automatización de alojamiento web. Permite al administrador del servidor configurar nuevos sitios web, cuentas de revendedor, cuentas de correo electrónico, y entradas de DNS a través de una interfaz basada en web.",
                     "ROOT_PASS": "Contraseña root",
                     "USER_PASS": "Contraseña ubuntu",
                     "APP_DOMAIN": "Dominio de Plesk",
