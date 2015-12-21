@@ -2806,7 +2806,7 @@
                         "contraint": ""
                     }
                 },
-                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   ubuntu:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart\n- export APP_DOMAIN=cirrusflex.com\n- export MY_IP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'`\n- export HOSTNAME=`hostname`\n- echo \"$HOSTNAME.$APP_DOMAIN\" > /etc/hostname\n- sed -i \"s/212.231.*/$MY_IP $HOSTNAME $HOSTNAME.$APP_DOMAIN/\" /etc/hosts\n- reboot"
+                "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   ubuntu:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart\n- export APP_DOMAIN=domain\n- export MY_IP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'`\n- export HOSTNAME=name\n- echo \"$HOSTNAME.$APP_DOMAIN\" > /etc/hostname\n- sed -i \"s/212.231.*/$MY_IP $HOSTNAME $HOSTNAME.$APP_DOMAIN/\" /etc/hosts\n- reboot"
             },
             "labels": {
                 "en": {
