@@ -314,7 +314,7 @@
                     },
                     "APP_DOMAIN": {
                         "value": "domain",
-                        "contraint": ""
+                        "constraint": ""
                     }
                 },
                 "content": "#!/bin/bash -e\\nresize2fs /dev/vdancat>/etc/inithooks.conf<<EOF\nexport HUB_APIKEY=SKIP\nexport ROOT_PASS=userpass\nexport SEC_UPDATES=FORCE\nexport APP_PASS=dcpass\nexport APP_DOMAIN=domain\nEOF"
@@ -2803,7 +2803,7 @@
                     },
                     "APP_DOMAIN": {
                         "value": "domain",
-                        "contraint": ""
+                        "constraint": ""
                     }
                 },
                 "content": "#cloud-config\nchpasswd:\n list: |\n   root:rootpass\n   ubuntu:userpass\n expire: False\nssh_pwauth: True\ndisable_root: false\nruncmd:\n- sed -i 's/without-password/yes/' /etc/ssh/sshd_config\n- service ssh restart\n- export APP_DOMAIN=domain\n- export MY_IP=`ifconfig | grep -Eo 'inet (addr:)?([0-9]*\\.){3}[0-9]*' | grep -Eo '([0-9]*\\.){3}[0-9]*' | grep -v '127.0.0.1'`\n- export HOSTNAME=name\n- echo \"$HOSTNAME.$APP_DOMAIN\" > /etc/hostname\n- sed -i \"s/212.231.*/$MY_IP $HOSTNAME $HOSTNAME.$APP_DOMAIN/\" /etc/hosts\n- reboot"
