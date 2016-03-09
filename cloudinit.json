@@ -2739,7 +2739,7 @@
         {
             "id": "42",
             "name": "Windows 2012 R2",
-            "image-id": "56686163-c804-4f3a-99a4-388a194d98ac",
+            "image-id": "5bd396d1-478e-493a-a206-8e272d5466ee",
             "organization": "StackOpsTechnologiesS.L.",
             "icon": "http://swift-mm1.mascloud.es/v1.0/AUTH_6e5b81981103492f83511c1785c8e1f8/static/Windows-Server2012R2.jpg",
             "cloudinit": false,
